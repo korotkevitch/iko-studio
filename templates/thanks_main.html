@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Контакты{% endblock %}
+
+<head>
+    {% block meta_extend %}{% endblock %}
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+{% block content %}
+
+        <!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+				<div class="container">
+					<div class="banner_content">
+						<h2>Контакты</h2>
+						<div class="page_link">
+							<a href="{% url 'index' %}">Главная</a>
+                            <a href="#">Контакты</a>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+        <div class="container">
+          <h2 style="text-align:center; margin-top:50px;">Спасибо! Ваше сообщение отправлено.</h2>
+        </div>
+
+
+
+{% endblock content %}
+
+</body>

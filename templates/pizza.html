@@ -1,0 +1,848 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <title>Одностраничный шаблон ресторана пиццы "Pizza Delicious"</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "pizza/css/open-iconic-bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "pizza/css/animate.css" %}">
+
+    <link rel="stylesheet" href="{% static "pizza/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "pizza/css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "pizza/css/magnific-popup.css" %}">
+
+    <link rel="stylesheet" href="{% static "pizza/css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "pizza/css/ionicons.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "pizza/css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "pizza/css/jquery.timepicker.css" %}">
+
+
+    <link rel="stylesheet" href="{% static "pizza/css/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "pizza/css/icomoon.css" %}">
+    <link rel="stylesheet" href="{% static "pizza/css/style.css" %}">
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+		      <a class="navbar-brand" href="{{ pizza.url }}"><img src="{% static "pizza/images/logo.png" %}" class="img-fluid" alt=""> delicious</a>
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="oi oi-menu"></span> Menu
+		      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{{ pizza.url }}" class="nav-link">Начало</a></li>
+	          <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
+	          <li class="nav-item"><a href="#popular" class="nav-link">Лучшее</a></li>
+	          <li class="nav-item"><a href="#gallery" class="nav-link">Галерея</a></li>
+	          <li class="nav-item"><a href="#team" class="nav-link">Команда</a></li>
+	          <li class="nav-item"><a href="#contacts" class="nav-link">Контакты</a></li>
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="pizza-slider" style="background-image: url({{ bg_1.image.url }})">
+      <div class="slider-item" style="padding-bottom: 20px">
+        <div class="container">
+          <div class="row slider-text align-items-center" style="text-align: center;">
+            <div class="col-md-6 col-sm-12 ftco-animate">
+            	<span class="subheading" style="font-family: 'Caveat', cursive; font-size: 40px">Вкусная</span>
+              <h1 class="mb-4">Italian Cuizine</h1>
+              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+				<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3" data-toggle="modal" data-target="#exampleModal">Заказать</a>
+				  <a href="{{ pizza.download_menu.url }}" download class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" >Скачать меню</a></p>
+            </div>
+            <div class="col-md-6 ftco-animate">
+            	<img src="{{ bg_pizza_1.image.url }}" class="img-fluid" style="max-width: 100%;" alt="">
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="ftco-intro">
+    	<div class="container-wrap">
+    		<div class="wrap d-md-flex">
+	    		<div class="info">
+	    			<div class="row no-gutters">
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-phone"></span></div>
+	    					<div class="text">
+	    						<h3>+7 945 6789012</h3>
+	    						<p>Доставка на дом, бронирование</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-my_location"></span></div>
+	    					<div class="text">
+	    						<h3>Невский пр-т, 78</h3>
+	    						<p>г.Санкт-Петербург</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-clock-o"></span></div>
+	    					<div class="text">
+	    						<h3>Работаем: пн-вс</h3>
+	    						<p>9:00am - 23:00pm</p>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="social d-md-flex pl-md-5 p-4 align-items-center">
+	    			<ul class="social-icon">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+	    		</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section id="about" class="ftco-about d-md-flex">
+    	<div class="one-half img" style="background-image: url({{ interier.image.url }});"></div>
+    	<div class="one-half ftco-animate">
+        <div class="heading-section ftco-animate ">
+          <h2 class="mb-4">Ждем вас в <span class="flaticon-pizza">Pizza</span> Delicious</h2>
+        </div>
+        <div>
+  				<p>{{ pizza.about }}</p>
+  			</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-services">
+    	<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Гарантируем</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+    		<div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-diet"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Качественные продукты</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-bicycle"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Быструю доставку</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5"><span class="flaticon-pizza-1"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Оригинальные рецепты</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section id="popular" class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Популярное</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+    	</div>
+    	<div class="container-wrap">
+    		<div class="row no-gutters d-flex">
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="{{ popular_pizza_1.image.url }}" class="img" style="background-image: url({{ popular_pizza_1.image.url }});"></a>
+    					<div class="text p-4">
+    						<h3>{{ popular_pizza_1.name }}</h3>
+    						<p>{{ popular_pizza_1.description }}</p>
+    						<p class="price"><span>{{ popular_pizza_1.price }}</span> <a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказ</a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="{{ popular_pizza_2.image.url }}" class="img" style="background-image: url({{ popular_pizza_2.image.url }});"></a>
+    					<div class="text p-4">
+    						<h3>{{ popular_pizza_2.name }}</h3>
+    						<p>{{ popular_pizza_2.description }}</p>
+    						<p class="price"><span>{{ popular_pizza_2.price }}</span> <a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказ</a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="{{ popular_pizza_3.image.url }}" class="img" style="background-image: url({{ popular_pizza_3.image.url }});"></a>
+    					<div class="text p-4">
+    						<h3>{{ popular_pizza_3.name }}</h3>
+    						<p>{{ popular_pizza_3.description }}</p>
+    						<p class="price"><span>{{ popular_pizza_3.price }}</span> <a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказ</a></p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="{{ popular_pizza_4.image.url }}" class="img order-lg-last" style="background-image: url({{ popular_pizza_4.image.url }});"></a>
+    					<div class="text p-4">
+    						<h3>{{ popular_pizza_4.name }}</h3>
+    						<p>{{ popular_pizza_4.description }}</p>
+    						<p class="price"><span>{{ popular_pizza_4.price }}</span> <a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказ</a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="{{ popular_pizza_5.image.url }}" class="img order-lg-last" style="background-image: url({{ popular_pizza_5.image.url }});"></a>
+    					<div class="text p-4">
+    						<h3>{{ popular_pizza_5.name }}</h3>
+    						<p>{{ popular_pizza_5.description }}</p>
+    						<p class="price"><span>{{ popular_pizza_5.price }}</span> <a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказ</a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-4 d-flex ftco-animate">
+    				<div class="services-wrap d-flex">
+    					<a href="{{ popular_pizza_6.image.url }}" class="img order-lg-last" style="background-image: url({{ popular_pizza_6.image.url }});"></a>
+    					<div class="text p-4">
+    						<h3>{{ popular_pizza_6.name }}</h3>
+    						<p>{{ popular_pizza_6.description }}</p>
+    						<p class="price"><span>{{ popular_pizza_6.price }}</span> <a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказ</a></p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+
+
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Меню</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            <p class="mt-5">Вы удивитесь, но far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_1.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_1.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_1.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_1.description }}</p>
+	        			</div>
+        			</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_2.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_2.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_2.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_2.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_3.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_3.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_3.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_3.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_4.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_4.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_4.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_4.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_5.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_5.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_5.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_5.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_6.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_6.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_6.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_6.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+
+
+        	<div class="col-md-6">
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_7.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_7.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_7.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_7.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_8.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_8.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_8.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_8.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_9.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_9.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_9.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_9.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_10.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_10.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_10.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_10.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_11.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_11.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_11.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_11.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+
+				<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_pizza_12.image.url }});"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_pizza_12.name }}</span></h3>
+	        				<span class="price">{{ menu_pizza_12.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_pizza_12.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
+    <section id="gallery" class="ftco-gallery">
+    	<div class="container-wrap">
+    		<div class="row no-gutters">
+					<div class="col-md-3 ftco-animate">
+						<a href="{{ gallery_1.image.url }}" class="gallery img d-flex align-items-center" style="background-image: url({{ gallery_1.image.url }});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="{{ gallery_2.image.url }}" class="gallery img d-flex align-items-center" style="background-image: url({{ gallery_2.image.url }});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="{{ gallery_3.image.url }}" class="gallery img d-flex align-items-center" style="background-image: url({{ gallery_3.image.url }});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+					<div class="col-md-3 ftco-animate">
+						<a href="{{ gallery_4.image.url }}" class="gallery img d-flex align-items-center" style="background-image: url({{ gallery_4.image.url }});">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+        </div>
+    	</div>
+    </section>
+
+
+		<section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url({{ bg_2.image.url }});" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+        	<div class="col-md-10">
+        		<div class="row">
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-pizza-1"></span></div>
+		              	<strong class="number" data-number="14">0</strong>
+		              	<span>Наименований пиццы</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-medal"></span></div>
+		              	<strong class="number" data-number="17">0</strong>
+		              	<span>Количество наград</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-laugh"></span></div>
+		              	<strong class="number" data-number="10567">0</strong>
+		              	<span>Счастливых посетителей</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-chef"></span></div>
+		              	<strong class="number" data-number="21">0</strong>
+		              	<span>Сотрудников</span>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-menu">
+    	<div class="container-fluid">
+    		<div class="row d-md-flex">
+	    		<div class="col-lg-4 ftco-animate img f-menu-img mb-5 mb-md-0" style="background-image: url({{ interier_2.image.url }});">
+	    		</div>
+	    		<div class="col-lg-8 ftco-animate p-md-5">
+		    		<div class="row">
+		          <div class="col-md-12 nav-link-wrap mb-5">
+		            <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Супы</a>
+
+		              <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Напитки</a>
+
+		              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Бургеры</a>
+
+		              <a class="nav-link" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Паста</a>
+		            </div>
+		          </div>
+		          <div class="col-md-12 d-flex align-items-center">
+
+		            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+		              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+		              	<div class="row">
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_1.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_1.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_1.image.url }}">{{ menu12_1.name }}</a></h3>
+		              					<p>{{ menu12_1.description }}</p>
+		              					<p class="price"><span>{{ menu12_1.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_2.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_2.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_2.image.url }}">{{ menu12_2.name }}</a></h3>
+		              					<p>{{ menu12_2.description }}</p>
+		              					<p class="price"><span>{{ menu12_2.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_3.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_3.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_3.image.url }}">{{ menu12_3.name }}</a></h3>
+		              					<p>{{ menu12_3.description }}</p>
+		              					<p class="price"><span>{{ menu12_3.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              	</div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+		                <div class="row">
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_4.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_4.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_4.image.url }}">{{ menu12_4.name }}</a></h3>
+		              					<p>{{ menu12_4.description }}</p>
+		              					<p class="price"><span>{{ menu12_4.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_5.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_5.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_5.image.url }}">{{ menu12_5.name }}</a></h3>
+		              					<p>{{ menu12_5.description }}</p>
+		              					<p class="price"><span>{{ menu12_5.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_6.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_6.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_6.image.url }}">{{ menu12_6.name }}</a></h3>
+		              					<p>{{ menu12_6.description }}</p>
+		              					<p class="price"><span>{{ menu12_6.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              	</div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+		                <div class="row">
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_7.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_7.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_7.image.url }}">{{ menu12_7.name }}</a></h3>
+		              					<p>{{ menu12_7.description }}</p>
+		              					<p class="price"><span>{{ menu12_7.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_8.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_8.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_8.image.url }}">{{ menu12_8.name }}</a></h3>
+		              					<p>{{ menu12_8.description }}</p>
+		              					<p class="price"><span>{{ menu12_8.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_9.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_9.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_9.image.url }}">{{ menu12_9.name }}</a></h3>
+		              					<p>{{ menu12_9.description }}</p>
+		              					<p class="price"><span>{{ menu12_9.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              	</div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
+		                <div class="row">
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_10.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_10.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_10.image.url }}">{{ menu12_10.name }}</a></h3>
+		              					<p>{{ menu12_10.description }}</p>
+		              					<p class="price"><span>{{ menu12_10.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_11.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_11.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_11.image.url }}">{{ menu12_11.name }}</a></h3>
+		              					<p>{{ menu12_11.description }}</p>
+		              					<p class="price"><span>{{ menu12_11.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu12_12.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu12_12.image.url }});"></a>
+		              				<div class="text">
+		              					<h3><a href="{{ menu12_12.image.url }}">{{ menu12_12.name }}</a></h3>
+		              					<p>{{ menu12_12.description }}</p>
+		              					<p class="price"><span>{{ menu12_12.price }}</span></p>
+		              					<p><a href="#" class="ml-2 btn btn-white btn-outline-white "data-toggle="modal" data-target="#exampleModal">Заказать</a></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              	</div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+    	</div>
+    </section>
+
+	<section id="team" class="ftco-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Команда</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            <p class="mt-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+      				<div class="img mb-4" style="background-image: url({{ personal_1.image.url }});"></div>
+      				<div class="info text-center">
+      					<h3>{{ personal_1.name }}</h3>
+      					<span class="position">{{ personal_1.position }}</span>
+      					<div class="text">
+	        				<p>{{ personal_1.description }}</p>
+	        			</div>
+      				</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+      				<div class="img mb-4" style="background-image: url({{ personal_2.image.url }});"></div>
+      				<div class="info text-center">
+      					<h3>{{ personal_2.name }}</h3>
+      					<span class="position">{{ personal_2.position }}</span>
+      					<div class="text">
+	        				<p>{{ personal_2.description }}</p>
+	        			</div>
+      				</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+      				<div class="img mb-4" style="background-image: url({{ personal_3.image.url }});"></div>
+      				<div class="info text-center">
+      					<h3>{{ personal_3.name }}</h3>
+      					<span class="position">{{ personal_3.position }}</span>
+      					<div class="text">
+	        				<p>{{ personal_3.description }}</p>
+	        			</div>
+      				</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
+        		<div class="staff">
+      				<div class="img mb-4" style="background-image: url({{ personal_4.image.url }});"></div>
+      				<div class="info text-center">
+      					<h3>{{ personal_4.name }}</h3>
+      					<span class="position">{{ personal_4.position }}</span>
+      					<div class="text">
+	        				<p>{{ personal_4.description }}</p>
+	        			</div>
+      				</div>
+        		</div>
+        	</div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-appointment">
+			<div class="overlay"></div>
+    	<div class="container-wrap">
+    		<div class="row no-gutters d-md-flex align-items-center">
+    			<div class="col-md-6 d-flex align-self-stretch">
+    				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.9432544508327!2d30.346127115898774!3d59.93308376950904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631c0736f6599%3A0x6868dc69bbcd3424!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDc4LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTEwMjU!5e0!3m2!1sru!2sby!4v1610793327276!5m2!1sru!2sby" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    			</div>
+	    		<div class="col-md-6 appointment ftco-animate">
+	    			<h3 class="mb-3">Напишите нам</h3>
+	    			<form action="pizza_feedback" class="appointment-form" method="POST">
+						{% csrf_token %}
+	    				<div class="d-md-flex">
+		    				<div class="form-group">
+		    					<input type="text" class="form-control" name="name" placeholder="Имя" required="">
+		    				</div>
+	    				</div>
+	    				<div class="d-me-flex">
+	    					<div class="form-group">
+		    					<input type="email" class="form-control" name="email" placeholder="Емейл" required="">
+		    				</div>
+	    				</div>
+	    				<div class="form-group">
+							<div class="d-me-flex">
+	    					<div class="form-group">
+		    					<input type="text" class="form-control" name = "phone" placeholder="Телефон">
+		    				</div>
+	    				</div>
+	    				<div class="form-group">
+							<textarea class="form-control" name="massage" rows="3" placeholder="Сообщение"></textarea>
+	            		</div>
+	            		<div class="form-group">
+	              			<input type="submit" value="Отправить" class="btn btn-primary">
+	            		</div>
+	    			</form>
+	    		</div>
+    		</div>
+    	</div>
+    </section>
+
+    <footer id="contacts">
+         <br> <p style="text-align: center;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Сайт создан <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> на базе шаблона <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static "pizza/js/jquery.min.js" %}"></script>
+  <script src="{% static "pizza/js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "pizza/js/popper.min.js" %}"></script>
+  <script src="{% static "pizza/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "pizza/js/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "pizza/js/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "pizza/js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "pizza/js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "pizza/js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "pizza/js/aos.js" %}"></script>
+  <script src="{% static "pizza/js/jquery.animateNumber.min.js" %}"></script>
+  <script src="{% static "pizza/js/bootstrap-datepicker.js" %}"></script>
+  <script src="{% static "pizza/js/jquery.timepicker.min.js" %}"></script>
+  <script src="{% static "pizza/js/scrollax.min.js" %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static "pizza/js/google-map.js" %}"></script>
+  <script src="{% static "pizza/js/main.js" %}"></script>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel" style="color: gray;">Форма заказа</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="pizza_feedback" method="POST">
+        {% csrf_token %}
+            <div class="form-group" style="background: darkgray; padding-left: 10px;">
+                <input type="text" class="form-control" name="name" placeholder="Имя" required="">
+            </div>
+
+            <div class="form-group" style="background: darkgray; padding-left: 10px;">
+                <input type="text" class="form-control" name = "phone" placeholder="Телефон" required="">
+            </div>
+
+            <div class="form-group" style="background: darkgray; padding-left: 10px;">
+                <textarea class="form-control" style="background: darkgray;" name="massage" rows="3" placeholder="Информация по заказу" required=""></textarea>
+            </div>
+            <!-- end of form-group -->
+            <input type="submit" value="Отправить" class="btn btn-primary">
+        </form>
+      </div>
+      <div class="modal-footer">
+        Отправляя заказ, вы соглашаетесь на обработку персональных данных.
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

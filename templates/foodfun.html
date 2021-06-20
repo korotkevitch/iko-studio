@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Шаблон одностраничного сайта ресторана Foodfun</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static "foodfun/assets/css/animate-3.7.0.css" %}">
+    <link rel="stylesheet" href="{% static "foodfun/assets/css/font-awesome-4.7.0.min.css" %}">
+    <link rel="stylesheet" href="{% static "foodfun/assets/css/bootstrap-4.1.3.min.css" %}">
+    <link rel="stylesheet" href="{% static "foodfun/assets/css/owl-carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "foodfun/assets/css/jquery.datetimepicker.min.css" %}">
+    <link rel="stylesheet" href="{% static "foodfun/assets/css/style.css" %}">
+</head>
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Area Starts -->
+	<header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo-area">
+                        <a href="{{ foodfun.url }}"><img src="{% static "foodfun/assets/images/logo/logo.png" %}" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="custom-navbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>  
+                    <div class="main-menu">
+                        <ul>
+                            <li class="active"><a href="{{ foodfun.url }}">Начало</a></li>
+                            <li><a href="#about">О ресторане</a></li>
+                            <li><a href="#menu">Меню</a></li>
+                            <li><a href="#testimonials">Отзывы</a></li>
+                            <li><a href="#gallery">Галерея</a></li>
+                            <li><a href="#reservation">Бронирование</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Banner Area Starts -->
+    <section class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h6>Самая интересная в мире</h6>
+                    <h1>Вкусная<span class="prime-color"> кухня</span><br>
+                    <span class="style-change"><span class="prime-color">food</span>fun</span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End -->
+
+    <!-- Welcome Area Starts -->
+    <section id="about" class="welcome-area section-padding2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-img">
+                        <img src="{% static "foodfun/assets/images/welcome-bg.png" %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-text mt-5 mt-md-0">
+                        <h3><span class="style-change">Приглашаем</span> <br>в ресторан</h3>
+                        <p class="pt-3">Created god gathered don't you yielding herb you had. And isn't, god was saw. Dominion. Great sixth for in unto was. Open can't tree am waters brought. Divide after there. Was.</p>
+                        <p>Created god gathered don't you yielding herb you had. And isn't, god was saw. Dominion. Great sixth for in unto was. Open can't tree waters brought. Divide after there. Was. Created god gathered don't you yielding herb you had. And isn't god.</p>
+                        <a href="#reservation" class="template-btn mt-3">Заказать столик</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome Area End -->
+
+    <!-- Food Area starts -->
+    <section id="menu" class="food-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="section-top">
+                        <h3><span class="style-change">Только</span> <br>вкусная еда</h3>
+                        <p class="pt-3">They're fill divide i their yielding our after have him fish on there for greater man moveth, moved Won't together isn't for fly divide mids fish firmament on net.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img src="{% static "foodfun/assets/images/food1.jpg" %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Название блюда</h5>
+                                <span class="style-change">710 р</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5 mt-sm-0">
+                        <div class="food-img">
+                            <img src="{% static "foodfun/assets/images/food2.jpg" %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Название блюда</h5>
+                                <span class="style-change">650 р</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5 mt-md-0">
+                        <div class="food-img">
+                            <img src="{% static "foodfun/assets/images/food3.jpg" %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Название блюда</h5>
+                                <span class="style-change">400 р</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img src="{% static "foodfun/assets/images/food4.jpg" %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Название блюда</h5>
+                                <span class="style-change">550 р</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img src="{% static "foodfun/assets/images/food5.jpg" %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Название блюда</h5>
+                                <span class="style-change">600 р</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img src="{% static "foodfun/assets/images/food6.jpg" %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Название блюда</h5>
+                                <span class="style-change">480 р</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Food Area End -->
+
+    <!-- Reservation Area Starts -->
+    <div class="reservation-area section-padding text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Лучшие продукты, безупречное приготовление</h2>
+                    <h4 class="mt-4">Наше меню удивит разнообразием и приятными ценами</h4>
+                    <a href="#" class="template-btn template-btn2 mt-4">Скачать меню</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reservation Area End -->
+    
+    <!-- Deshes Area Starts -->
+    <div class="deshes-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3> <span>Блюда</span> от шефа</h3>
+                        <p><i>Попробуйте шедевры нашего шеф-повара</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <div class="deshes-text">
+                        <h3><span>Garlic</span><br> green beans</h3>
+                        <p class="pt-3">Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.</p>
+                        <span class="style-change">980 р</span>
+                        <a href="#reservation" class="template-btn3 mt-3">Забронировать столик <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="{% static "foodfun/assets/images/deshes1.png" %}" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="{% static "foodfun/assets/images/deshes2.png" %}" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <div class="deshes-text">
+                        <h3><span>Lemon</span><br> rosemary chicken</h3>
+                        <p class="pt-3">Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.</p>
+                        <span class="style-change">870 р</span>
+                        <a href="#" class="template-btn3 mt-3">Забронировать столик <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Deshes Area End -->
+
+    <!-- Testimonial Area Starts -->
+    <section id="testimonials" class="testimonial-area section-padding4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>Гости <span>говорят</span></h3>
+                        <p><i>Отзывы наших постоянных посетителей</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonial-slider owl-carousel">
+                        <div class="single-slide d-sm-flex">
+                            <div class="customer-img mr-4 mb-4 mb-sm-0">
+                                <img src="{% static "foodfun/assets/images/customer1.png" %}" alt="">
+                            </div>
+                            <div class="customer-text">
+                                <h5>Семен Чурин</h5>
+                                <span><i>Гость</i></span>
+                                <p class="pt-3">You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                        <div class="single-slide d-sm-flex">
+                            <div class="customer-img mr-4 mb-4 mb-sm-0">
+                                <img src="{% static "foodfun/assets/images/customer2.png" %}" alt="">
+                            </div>
+                            <div class="customer-text">
+                                <h5>Адам Зорин</h5>
+                                <span><i>Гость</i></span>
+                                <p class="pt-3">You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                        <div class="single-slide d-sm-flex">
+                            <div class="customer-img mr-4 mb-4 mb-sm-0">
+                                <img src="{% static "foodfun/assets/images/customer1.png" %}" alt="">
+                            </div>
+                            <div class="customer-text">
+                                <h5>Виктор Миронов</h5>
+                                <span><i>Гость</i></span>
+                                <p class="pt-3">You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Area End -->
+
+    <div id="gallery" class="section-top-border">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>Наша <span>галерея</span></h3>
+                    </div>
+                <div class="row gallery-item">
+                    <div class="col-md-4">
+                        <a href="{% static "foodfun/assets/images/elements/g-1.jpg" %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static "foodfun/assets/images/elements/g-1.jpg" %});"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{% static "foodfun/assets/images/elements/g-2.jpg" %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static "foodfun/assets/images/elements/g-2.jpg" %});"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{% static "foodfun/assets/images/elements/g-3.jpg" %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static "foodfun/assets/images/elements/g-3.jpg" %});"></div></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="{% static "foodfun/assets/images/elements/g-4.jpg" %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static "foodfun/assets/images/elements/g-4.jpg" %});"></div></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="{% static "foodfun/assets/images/elements/g-5.jpg" %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static "foodfun/assets/images/elements/g-5.jpg" %});"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{% static "foodfun/assets/images/elements/g-6.jpg" %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static "foodfun/assets/images/elements/g-6.jpg" %});"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{% static "foodfun/assets/images/elements/g-7.jpg" %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static "foodfun/assets/images/elements/g-7.jpg" %});"></div></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="{% static "foodfun/assets/images/elements/g-8.jpg" %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static "foodfun/assets/images/elements/g-8.jpg" %});"></div></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Table Area Starts -->
+    <section id="reservation" class="table-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>Забронируйте <span>себе</span> столик</h3>
+                        <p><i>Мы всегда рады гостям, но столик на вечер лучше зарезервировать</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <form action="#">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                            </div>
+                            <input type="text" placeholder="Дата">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-clock-o"></i></span>
+                            </div>
+                            <input type="text" placeholder="Время">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-user-o"></i></span>
+                            </div>
+                            <input type="text" placeholder="Персон">
+                        </div>
+                        <div class="table-btn text-center">
+                            <a href="#" class="template-btn template-btn2 mt-4">Забронировать</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Table Area End -->
+
+
+    <!-- Footer Area Starts -->
+    <footer class="footer-area">
+        <div class="footer-widget section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget1">
+                            <a href="{{ foodfun.url }}"><img src="{% static "foodfun/assets/images/logo/logo2.png" %}" alt=""></a>
+                            <p class="mt-3">Which morning fourth great won't is to fly bearing man. Called unto shall seed, deep, herb set seed land divide after over first creeping.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget2 my-5 my-md-0">
+                            <h5 class="mb-4">Контакты</h5>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>г.Москва, ул.Лесная,34 </p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>+7 985 000-00-00</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>info@site.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget3">
+                            <h5 class="mb-4">Время работы</h5>
+                            <p>Пн ...................... Выходной</p>
+                            <p>Вт-Пт .............. 10.00 - 24.00</p>
+                            <p>Сб-Вс ................. 8.00 - 1.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6">
+                        <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Сайт создан <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> на базе шаблона <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li class="no-margin">Мы в соцсетях</li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+
+    <!-- Javascript -->
+    <script src="{% static "foodfun/assets/js/vendor/jquery-2.2.4.min.js" %}"></script>
+	<script src="{% static "foodfun/assets/js/vendor/bootstrap-4.1.3.min.js" %}"></script>
+    <script src="{% static "foodfun/assets/js/vendor/wow.min.js" %}"></script>
+    <script src="{% static "foodfun/assets/js/vendor/owl-carousel.min.js" %}"></script>
+    <script src="{% static "foodfun/assets/js/vendor/jquery.datetimepicker.full.min.js" %}"></script>
+    <script src="{% static "foodfun/assets/js/vendor/jquery.nice-select.min.js" %}"></script>
+    <script src="{% static "foodfun/assets/js/main.js" %}"></script>
+</body>
+</html>

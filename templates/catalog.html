@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Каталог готовых решений для вашего сайта{% endblock %}
+
+<head>
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(76317934, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/76317934" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    {% block meta_extend %}{% endblock %}
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+{% block content %}
+
+        <!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+				<div class="container">
+					<div class="banner_content">
+						<h2>Каталог сайтов</h2>
+						<div class="page_link">
+							<a href="{% url 'index' %}">Главная</a>
+                            <a href="#">Каталог</a>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+
+        <!--================Project Area =================-->
+        <section class="project_area">
+        	<div class="row m0">
+				{% for i in templates %}
+        		<div class="col-lg-4 col-md-6 p0">
+        			<div class="project_item">
+        				<img src="{{ i.image_cat.url }}" alt="">
+        				<div class="hover_text">
+        					<h4 style="color:#b48a8a;">{{ i.title_short }}</h4>
+        					<div class="cat">
+								<a href="{{ i.area.slug_in_catalog }}">{{ i.area }}</a>
+        					</div>
+        					<a target="_blank" class="main_btn" href="{{ i.get_absolute_url }}">Подробнее</a>
+        				</div>
+        			</div>
+        		</div>
+				{% endfor %}
+
+
+        	</div>
+        </section>
+        <!--================End Project Area =================-->
+
+        <!--================Project Details Area =================-->
+        <section class="project_know_area p_120">
+        	<div class="container">
+        		<div class="project_know_inner text-center">
+        			<h3>Нужен сайт быстро и недорого?</h3>
+        			<p>Создадим лендинг, разместим на хостинге, предоставим доступ в админку для самостоятельной замены контента.
+					Первичное размещение текстов и фотографий делаем мы.</p>
+        			<p><a href="#" class="white_btn" data-toggle="modal" data-target="#exampleModal">Заказать сайт</a></p>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Project Details Area =================-->
+
+{% endblock content %}
+
+</body>

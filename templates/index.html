@@ -1,0 +1,320 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+    <head>
+		<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(76317934, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/76317934" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Лендинги с админкой под ключ на базе готовых адаптивных шаблонов.</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static "occupy/css/bootstrap.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/linericon/style.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/css/font-awesome.min.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/owl-carousel/owl.carousel.min.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/lightbox/simpleLightbox.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/nice-select/css/nice-select.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/animate-css/animate.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/swiper/css/swiper.min.css" %}">
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static "occupy/css/style.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/css/responsive.css" %}">
+    </head>
+    <body>
+
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="#"><img src="{% static "images/logo.jpg" %}" alt=""></a>
+						<a style="font-size:30px; color:gray;" href="tel:+375297351867"><i class="fa fa-phone"></i></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav justify-content-center">
+								<li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Главная</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'about' %}">О проекте</a></li>
+								<li class="nav-item submenu dropdown ">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="{% url 'catalog' %}">Все</a>
+                                        {% for i in areas %}
+										<li class="nav-item"><a class="nav-link" href="{{ i.get_absolute_url }}">{{ i.area }}</a>
+
+                                        {% endfor %}
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+								<li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Контакты</a></li>
+							</ul>
+
+						</div>
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area">
+            <div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="{% static "occupy/img/slider/slider-1.jpg" %}" alt="">
+						<div class="slider_text_inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-7">
+										<div class="slider_text">
+											<h2>Сайт под ключ -<br />готовые решения</h2>
+											<p>Создаем адаптивные сайты на базе готовых шаблонов из нашего каталога или из предложенных вами.</p>
+											<a class="banner_btn" href="{% url 'catalog' %}">Каталог</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide"><img src="{% static "occupy/img/slider/slider-old.jpg" %}" alt="">
+						<div class="slider_text_inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-7">
+										<div class="slider_text">
+											<h2>Хостинг +<br />контекстная реклама</h2>
+											<p>Берем сайт на обслуживание и предоставляем хостинг, настраиваем и сопровождаем контекстную рекламу. Ставим веб-аналитику.</p>
+											<a class="banner_btn" href="{% url 'catalog' %}">Каталог</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+        <!--================End Home Banner Area =================-->
+
+        <!--================Mission Area =================-->
+        <section class="mission_area">
+			<div class="row m0">
+				<div class="col-lg-6 p0">
+					<div class="left_img"><img src="{% static "occupy/img/mission-1.jpg" %}" alt=""></div>
+				</div>
+				<div class="col-lg-6 p0">
+					<div class="mission_slider owl-carousel">
+						<div class="item">
+							<div class="mission_text">
+								<h4>Сделаем быстро, дешево</h4>
+								<p>Начиная привлекать клиентов для своего бизнеса из Интернета, вы сразу же окажетесь перед необходимостью запустить контекстную рекламу.
+									Кликая по рекламе, пользователь должен попасть на ваш сайт, специально "заточенный" под первое знакомство. Сайт должен быть лаконичным, запоминающимся и вызывать желание узнать о вас больше.
+									Эту задачу решают лендинги, или одностраничные сайты, созданные в рекламных целях. Получить красивый лендинг быстро и недорого можно с помощью наших готовых решений - сайтов на базе готовых шаблонов.</p>
+							</div>
+							<div class="mission_text">
+								<h4>Возьмем на обслуживание</h4>
+								<p>Преимуществом наших лендингов является тот факт, что обслуживать их вы можете самостоятельно, не привлекая программистов.
+								Простая и удобная админка позволяет легко менять все тексты и фотографии на сайте. Но если вам лень "заморачиваться", мы возьмем это на себя за небольшую цену.
+								Беря сайт на обслуживание, мы дарим клиентам домен .ru, предоставляем свой хостинг, меняем (по надобности) контент сайта, настраиваем и сопровождаем контекстную рекламу.</p>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="mission_text">
+								<h4>Домен и хостинг</h4>
+								<p>Сайты, которые мы предлагаем своим клиентам, сделаны на Python + Django, поэтому хостинг, на котором будет размещаться сайт, должны поддерживать эту технологию.
+								Мы используем хостинг Jino.ru и предоставляем клиентам, взятым на обслуживание, свой хостинг. Если у вас нет пока своего домена для создаваемого сайта, мы подарим домен в зоне ru, оплатив его на год.</p>
+							</div>
+							<div class="mission_text">
+								<h4>Контекстная реклама</h4>
+								<p>Для того, чтобы ваш бизнес почувствовал быструю отдачу от сайта, мы предлагаем своим клиентам в рамках обслуживания сайта ведение контекстной рекламы.
+								Для вашей ниши мы подберем поисковые запросы, настроим аналитику и запустим рекламу. По ходу рекламы будем корректировать ставки, вводить минус-слова и добиваться максимальной конверсии.
+								Ежемесячно вы будете получать подробный отчет о показах, кликах, конверсии и расходовании денег. А также полный  социально-демографический портрет заинтересованных посетителей лендинга.</p>
+							</div>
+						</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+        <!--================End Mission Area =================-->
+
+        <!--================Success Area =================-->
+        <section class="success_area">
+        	<div class="row m0">
+        		<div class="col-lg-6 p0">
+        			<div class="mission_text">
+						<h4>Сайт на базе шаблона</h4>
+						<p>Если вы только начинаете свой бизнес, то главная задача для вас - приток клиентов. Сразу создавать большой сайт с эксклюзивным дизайном - цель не самая актуальная.
+							Для этого случая как раз и подойдет сайт на базе готового шаблона. Заказывая его у нас, вы сразу убиваете нескольких зайцев:
+							удешевляете выход на рынок и ускоряете приток покупателей ваших товаров и услуг из интернета. Сайт на базе шаблона стоит на порядок дешевле своих эксклюзивных собратьев,
+							а его разработка занимает не более недели, а то и вовсе пару дней.
+						</p>
+					</div>
+        		</div>
+        		<div class="col-lg-6 p0">
+        			<div class="success_img">
+        				<img src="{% static "occupy/img/success-1.jpg" %}" alt="">
+        			</div>
+        		</div>
+        	</div>
+        	<div class="row m0 right_dir">
+        		<div class="col-lg-6 p0">
+        			<div class="success_img">
+        				<img src="{% static "occupy/img/success-2.jpg" %}" alt="">
+        			</div>
+        		</div>
+        		<div class="col-lg-6 p0">
+        			<div class="mission_text">
+						<h4>Нужны клиенты? Берите!</h4>
+						<p>Вместе с недорогим лендигом (одностраничным сайтом) мы готовы предоставить вам обслуживание сайта, включающее в себя хостинг, обновление материалов, контекстную рекламу.
+						За небольшие деньги мы настроим для сайта рекламу, будем отслеживать поведение посетителей, управлять ставками для того, чтобы увеличить приток клиентов или снизить его,
+						если их будет чересчур много (да-да, и такое часто бывает).</p>
+					</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Success Area =================-->
+
+        <!--================Project Area =================-->
+        <section class="project_area">
+        	<div class="row m0">
+				{% for i in templates %}
+        		<div class="col-lg-4 col-md-6 p0">
+        			<div class="project_item">
+        				<img src="{{ i.image_cat.url }}" alt="{{ i.title }}">
+        				<div class="hover_text">
+        					<h4 style="color:#b48a8a;">{{ i.title_short }}</h4>
+        					<div class="cat">
+								<a href="{{ i.area.slug_in_catalog }}">{{ i.area }}</a>
+        					</div>
+        					<a target="_blank" class="main_btn" href="{{ i.get_absolute_url }}">Подробнее</a>
+        				</div>
+        			</div>
+        		</div>
+				{% endfor %}
+
+        	</div>
+        </section>
+        <!--================End Project Area =================-->
+
+        <!--================Project Details Area =================-->
+        <section class="project_know_area p_120">
+        	<div class="container">
+        		<div class="project_know_inner text-center">
+        			<h3>Нужен сайт быстро и недорого?</h3>
+        			<p>Создадим лендинг, разместим на хостинге, предоставим доступ в админку для самостоятельной замены контента.
+					Первичное размещение текстов и фотографий делаем мы.</p>
+					<p><a href="#" class="white_btn" data-toggle="modal" data-target="#exampleModal">Заказать сайт</a></p>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Project Details Area =================-->
+
+        <!--================ start footer Area  =================-->
+        <footer class="ftco-footer">
+			<div class="container-fluid px-0 py-5 bg-black">
+    			<div class="container">
+        			<div class="row">
+            			<div style="text-align:center;" class="col-md-12">
+                		<p class="mb-0" style="color: gray;">
+                    	<a href="tel:+375297351867"><i class="fa fa-phone"></i>  +375 (29) 735-18-67</a><br>
+						Создание сайта: <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> & <a href="https://colorlib.com" target="_blank">Colorlib</a>                </p>
+            			</div>
+						<div style="text-align:center; font-size:20px; letter-spacing: 3px;" class="col-lg-12 col-md-3 footer-social">
+                        <a target="_blank" href="https://www.facebook.com/groups/780306726243086"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/iko_studio_com/"><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.pinterest.com/3955f957e18269d051fd8ecbfa96a9
+"><i class="fa fa-pinterest"></i></a>
+                        <a target="_blank" href="https://vk.com/ikostudio"><i class="fa fa-vk"></i></a>
+                    	</div>
+        			</div>
+    			</div>
+			</div>
+		</footer>
+		<!--================ End footer Area  =================-->
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static "occupy/js/jquery-3.2.1.min.js" %}"></script>
+        <script src="{% static "occupy/js/popper.js" %}"></script>
+        <script src="{% static "occupy/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "occupy/js/stellar.js" %}"></script>
+        <script src="{% static "occupy/vendors/lightbox/simpleLightbox.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/nice-select/js/jquery.nice-select.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/isotope/imagesloaded.pkgd.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/isotope/isotope-min.js" %}"></script>
+        <script src="{% static "occupy/vendors/owl-carousel/owl.carousel.min.js" %}"></script>
+        <script src="{% static "occupy/js/jquery.ajaxchimp.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/counter-up/jquery.waypoints.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/counter-up/jquery.counterup.js" %}"></script>
+        <script src="{% static "occupy/js/mail-script.js" %}"></script>
+        <script src="{% static "occupy/vendors/popup/jquery.magnific-popup.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/swiper/js/swiper.min.js" %}"></script>
+        <script src="{% static "occupy/js/theme.js" %}"></script>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h3 class="modal-title" id="exampleModalLabel" style="color: gray;">Форма заказа</h3>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form action="feedback_index" method="POST">
+				{% csrf_token %}
+				<div class="form-group">
+					<input type="text" class="form-control" name="name" placeholder="Имя" required="">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control" name = "email" placeholder="Email" required="">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control" name = "subject" placeholder="Тема" >
+				</div>
+
+				<div class="form-group">
+					<textarea class="form-control" name="message" rows="3" placeholder="Сообщение" required=""></textarea>
+				</div>
+				<!-- end of form-group -->
+				<input type="submit" value="Отправить" class="btn btn-primary">
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			Отправляя заказ, вы соглашаетесь на обработку персональных данных.
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+    </body>
+</html>
+

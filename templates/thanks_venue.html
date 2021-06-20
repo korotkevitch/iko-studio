@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+<title>The Venue</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="The Venue template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/bootstrap-4.1.2/bootstrap.min.css" %}">
+<link href="{% static "venue/plugins/font-awesome-4.7.0/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static "venue/plugins/OwlCarousel2-2.2.1/owl.carousel.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/plugins/OwlCarousel2-2.2.1/owl.theme.default.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/plugins/OwlCarousel2-2.2.1/animate.css" %}">
+<link href="{% static "venue/plugins/colorbox/colorbox.css" %}" rel="stylesheet" type="text/css" >
+<link href="{% static "venue/plugins/jquery-datepicker/jquery-ui.css" %}" rel="stylesheet" type="text/css" >
+<link href="{% static "venue/plugins/jquery-timepicker/jquery.timepicker.css" %}" rel="stylesheet" type="text/css" >
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/main_styles.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/responsive.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/menu.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/menu_responsive.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/about.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "venue/styles/sign.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/about_responsive.css" %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@1&family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="logo">
+							<a href="#" style="letter-spacing: 0.4em">
+								<div>Venue</div>
+								<div>ресторан</div>
+							</a>
+						</div>
+
+						<div class="reservations_phone ml-auto">Бронирование: +7 234 5678901</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ thanks.image.url }}" data-speed="0.8"></div>
+        <div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content text-center">
+							<div class="home_subtitle page_subtitle"></div>
+							<div class="home_title"><h1 style="font-size: 36px;">{{ thanks.phrase }}</h1></div>
+							<a href="{% url 'venue' %}" style="font-size: 28px; color: cyan;">Вернуться на сайт</a>
+							<div class="home_text ml-auto mr-auto">
+								<p>{{ text.third_title }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="thank">
+
+</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<!-- Footer Logo -->
+				<div class="col-lg-3 footer_col">
+					<div class="footer_logo">
+						<div class="footer_logo_title" >Venue</div>
+						<div class="footer_logo_subtitle" style="letter-spacing: 0.4em;">ресторан</div>
+					</div>
+
+				</div>
+
+				<!-- Footer About -->
+				<div class="col-lg-6 footer_col">
+					<div class="footer_about">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio.</p>
+					</div>
+				</div>
+
+				<!-- Footer Contact -->
+				<div class="col-lg-3 footer_col">
+					<div class="footer_contact">
+						<ul>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div><div class="footer_contact_title">Адрес:</div></div>
+								<div class="footer_contact_text">г.Тулв, ул.Прямая, 71</div>
+							</li>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div><div class="footer_contact_title">Тел.:</div></div>
+								<div class="footer_contact_text">+7 123 4567890</div>
+							</li>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div><div class="footer_contact_title">Емейл:</div></div>
+								<div class="footer_contact_text">email@mydomain.ru</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright" style="text-align: center; margin-top: 50px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<p style="line-height: 1.2;">Сайт создан <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> на базе шаблона <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+	</footer>
+
+</div>
+
+<script src="{% static "venue/js/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "venue/styles/bootstrap-4.1.2/popper.js" %}"></script>
+<script src="{% static "venue/styles/bootstrap-4.1.2/bootstrap.min.js" %}"></script>
+<script src="{% static "venue/plugins/greensock/TweenMax.min.js" %}"></script>
+<script src="{% static "venue/plugins/greensock/TimelineMax.min.js" %}"></script>
+<script src="{% static "venue/plugins/scrollmagic/ScrollMagic.min.js" %}"></script>
+<script src="{% static "venue/plugins/greensock/animation.gsap.min.js" %}"></script>
+<script src="{% static "venue/plugins/greensock/ScrollToPlugin.min.js" %}"></script>
+<script src="{% static "venue/plugins/OwlCarousel2-2.2.1/owl.carousel.js" %}"></script>
+<script src="{% static "venue/plugins/easing/easing.js" %}"></script>
+<script src="{% static "venue/plugins/parallax-js-master/parallax.min.js" %}"></script>
+<script src="{% static "venue/plugins/colorbox/jquery.colorbox-min.js" %}"></script>
+<script src="{% static "venue/plugins/jquery-datepicker/jquery-ui.js" %}"></script>
+<script src="{% static "venue/plugins/jquery-timepicker/jquery.timepicker.js" %}"></script>
+<script src="{% static "venue/js/custom.js" %}"></script>
+<script src="{% static "venue/js/about.js" %}"></script>
+<script src="{% static "venue/js/menu.js" %}"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel" style="color: gray;">Форма заказа</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="venue_feedback" method="POST">
+        {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" placeholder="Имя" required="">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name = "phone" placeholder="Телефон" required="">
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" name="massage" rows="3" placeholder="Информация по заказу" required=""></textarea>
+            </div>
+            <!-- end of form-group -->
+            <input type="submit" value="Отправить" class="btn btn-secondary">
+        </form>
+      </div>
+      <div class="modal-footer">
+        Отправляя заказ, вы соглашаетесь на обработку персональных данных.
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

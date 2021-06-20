@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ current_tmpl.title }}{% endblock title %}
+
+<head>
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(76004191, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/76004191" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    {% block meta_extend %}{% endblock %}
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+{% block content %}
+
+<!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+				<div class="container">
+					<div class="banner_content">
+						<h2>{{ current_tmpl.title_short }}</h2>
+						<div class="page_link">
+							<a href="{{ current_area.get_absolute_url }}">{{ current_tmpl.area }}</a>
+                            <a href="#">{{ current_tmpl.title_crumb }}</a>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+<!--================End Home Banner Area =================-->
+
+<!--================Portfolio Details Area =================-->
+        <section class="portfolio_details_area p_120">
+        	<div class="container">
+        		<div class="portfolio_details_inner">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="left_img">
+								<img class="img-fluid" src="{{ current_tmpl.image.url }}" alt="{{ current_tmpl.title }}">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="portfolio_right_text">
+								<h4>{{ current_tmpl.caption }}</h4>
+								<p>{{ current_tmpl.description_short }}</p>
+								<a style="margin-right:8px;" class="banner_btn" href="/demo/{{current_tmpl.tmpl_name}}">Демо</a>
+
+                                <h4 style="margin-top:30px;">Цена: 150 рублей</h4>
+								<br>
+								<p>Обслуживание сайта, включающее в себя хостинг, обновление текстов и изображений по поручению клиента,
+								а также настройку, запуск и сопровождение контекстной рекламы в Яндексе и Гугле:
+								</p>
+								<h4>50 рублей/месяц</h4>
+
+							</div>
+						</div>
+					</div>
+       				<p>{{ current_tmpl.description_long }}</p>
+        		</div>
+        	</div>
+        </section>
+<!--================End Portfolio Details Area =================-->
+		<section class="project_know_area p_120">
+        	<div class="container">
+        		<div class="project_know_inner text-center">
+        			<h3>Нужен сайт быстро и недорого?</h3>
+        			<p>Создадим лендинг, разместим на хостинге, предоставим доступ в админку для самостоятельной замены контента.
+					Первичное размещение текстов и фотографий делаем мы.</p>
+        			<p><a href="#" class="white_btn" data-toggle="modal" data-target="#exampleModal">Заказать сайт</a></p>
+        		</div>
+        	</div>
+        </section>
+
+
+{% endblock content %}
+
+</body>

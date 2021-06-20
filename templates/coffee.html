@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <title>Шаблон сайта кофейни</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link rel="stylesheet" href="{% static "coffee/css/open-iconic-bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/animate.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/aos.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/ionicons.min.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/jquery.timepicker.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/icomoon.css" %}">
+    <link rel="stylesheet" href="{% static "coffee/css/style.css" %}">
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Браво<small>Кофейня</small></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="#" class="nav-link">Начало</a></li>
+	          <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
+	          <li class="nav-item"><a href="#service" class="nav-link">Сервис</a></li>
+	          <li class="nav-item"><a href="#menu" class="nav-link">Меню</a></li>
+				<li class="nav-item"><a href="#popular" class="nav-link">Популярное</a></li>
+	          <li class="nav-item"><a href="#testimonials" class="nav-link">Отзывы</a></li>
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url({% static "coffee/images/bg_1.jpg" %})">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading" style="font-family: 'Caveat', cursive; font-size: 40px">Добро пожаловать!</span>
+              <h1 class="mb-4">Лучший кофе в городе</h1>
+              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url({% static "coffee/images/bg_2.jpg" %})">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading" style="font-family: 'Caveat', cursive; font-size: 40px">Добро пожаловать!</span>
+              <h1 class="mb-4">Ваши любимые рецепты</h1>
+              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url({% static "coffee/images/bg_3.jpg" %})">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading" style="font-family: 'Caveat', cursive; font-size: 40px">Добро пожаловать!</span>
+              <h1 class="mb-4">Большой выбор напитков и закусок</h1>
+              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-intro">
+    	<div class="container-wrap">
+    		<div class="wrap d-md-flex align-items-xl-end">
+	    		<div class="info">
+	    			<div class="row no-gutters">
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-phone"></span></div>
+	    					<div class="text">
+	    						<h3>+7 (000) 0000000</h3>
+	    						<p>Заказ столиков</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-my_location"></span></div>
+	    					<div class="text">
+	    						<h3>г.Владивосток</h3>
+	    						<p>	ул.Прямая, 1234</p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-4 d-flex ftco-animate">
+	    					<div class="icon"><span class="icon-clock-o"></span></div>
+	    					<div class="text">
+	    						<h3>Работаем: пнд-птн</h3>
+	    						<p>10:00-23:00</p>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="book p-4">
+	    			<h3>Заказать столик</h3>
+	    			<form action="coffee_feedback" method="POST" class="appointment-form">
+						{% csrf_token %}
+	    				<div class="d-md-flex">
+		    				<div class="form-group">
+		    					<input type="text" class="form-control" name="first_name" placeholder="Имя">
+		    				</div>
+		    				<div class="form-group ml-md-4">
+		    					<input type="text" class="form-control" name="second_name" placeholder="Фамилия">
+		    				</div>
+	    				</div>
+	    				<div class="d-md-flex">
+		    				<div class="form-group">
+		    					<div class="input-wrap">
+		            		<input type="text" class="form-control" name="date" placeholder="Дата">
+	            		</div>
+		    				</div>
+		    				<div class="form-group ml-md-4">
+		    					<div class="input-wrap">
+		            		<input type="text" class="form-control" name="time" placeholder="Время">
+	            		</div>
+		    				</div>
+		    				<div class="form-group ml-md-4">
+		    					<input type="text" class="form-control" name="phone" placeholder="Телефон">
+		    				</div>
+	    				</div>
+	    				<div class="d-md-flex">
+	    					<div class="form-group">
+		              <textarea name="massage" id="" cols="30" rows="2" class="form-control" placeholder="Сообщение"></textarea>
+		            </div>
+		            <div class="form-group ml-md-4">
+		              <input type="submit" value="Отправить" class="btn btn-white py-3 px-4">
+		            </div>
+	    				</div>
+	    			</form>
+	    		</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section id="about" class="ftco-about d-md-flex">
+    	<div class="one-half img" style="background-image: url({% static "coffee/images/about.jpg" %})"></div>
+    	<div class="one-half ftco-animate">
+    		<div class="overlap">
+	        <div class="heading-section ftco-animate ">
+	        	<span class="subheading" style="font-family: 'Caveat', cursive; font-size: 40px; margin-bottom: -15px;">Немного</span>
+	          <h2 class="mb-4">О нас</h2>
+	        </div>
+	        <div>
+	  				<p>{{ info.about }}</p>
+	  			</div>
+  			</div>
+    	</div>
+    </section>
+
+    <section id="service" class="ftco-section ftco-services">
+    	<div class="container">
+    		<div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-choices"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Легкий заказ</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-delivery-truck"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Быстрая доствка</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="media d-block text-center block-6 services">
+              <div class="icon d-flex justify-content-center align-items-center mb-5">
+              	<span class="flaticon-coffee-bean"></span></div>
+              <div class="media-body">
+                <h3 class="heading">Качественный кофе</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section id="menu" class="ftco-section">
+    	<div class="container">
+    		<div class="row align-items-center">
+    			<div class="col-md-6 pr-md-5">
+    				<div class="heading-section text-md-right ftco-animate">
+	          	<span class="subheading" style="font-family: 'Caveat', cursive; font-size: 40px; margin-bottom: -15px;">Посмотрите</span>
+	            <h2 class="mb-4">Наше меню</h2>
+	            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+	            <p><a href="{{ info.download_menu.url }}" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать меню</a></p>
+	          </div>
+    			</div>
+    			<div class="col-md-6">
+    				<div class="row">
+    					<div class="col-md-6">
+    						<div class="menu-entry">
+		    					<a href="#" class="img" style="background-image: url({% static "coffee/images/menu-1.jpg" %})"></a>
+		    				</div>
+    					</div>
+    					<div class="col-md-6">
+    						<div class="menu-entry mt-lg-4">
+		    					<a href="#" class="img" style="background-image: url({% static "coffee/images/menu-2.jpg" %})"></a>
+		    				</div>
+    					</div>
+    					<div class="col-md-6">
+    						<div class="menu-entry">
+		    					<a href="#" class="img" style="background-image: url({% static "coffee/images/menu-3.jpg" %})"></a>
+		    				</div>
+    					</div>
+    					<div class="col-md-6">
+    						<div class="menu-entry mt-lg-4">
+		    					<a href="#" class="img" style="background-image: url({% static "coffee/images/menu-4.jpg" %})"></a>
+		    				</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    <br><br>
+    	<div class="container">
+        <div class="row">
+        	<div class="col-md-6 mb-5 pb-3">
+        		<h3 class="mb-5 heading-pricing ftco-animate">Закуски</h3>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_1.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_1.name }}</span></h3>
+	        				<span class="price">{{ menu_1.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_1.description }}</p>
+	        			</div>
+        			</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_2.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_2.name }}</span></h3>
+	        				<span class="price">{{ menu_2.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_2.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_3.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_3.name }}</span></h3>
+	        				<span class="price">{{ menu_3.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_3.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_4.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_4.name }}</span></h3>
+	        				<span class="price">{{ menu_4.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_4.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+
+        	<div class="col-md-6 mb-5 pb-3">
+        		<h3 class="mb-5 heading-pricing ftco-animate">Горячее</h3>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_5.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_5.name }}</span></h3>
+	        				<span class="price">{{ menu_5.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_5.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_6.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_6.name }}</span></h3>
+	        				<span class="price">{{ menu_6.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_6.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_7.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_7.name }}</span></h3>
+	        				<span class="price">{{ menu_7.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_7.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_8.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_8.name }}</span></h3>
+	        				<span class="price">{{ menu_8.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_8.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+
+        	<div class="col-md-6">
+        		<h3 class="mb-5 heading-pricing ftco-animate">Десерты</h3>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_9.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_9.name }}</span></h3>
+	        				<span class="price">{{ menu_9.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_9.description }}</p>
+	        			</div>
+        			</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_10.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_10.name }}</span></h3>
+	        				<span class="price">{{ menu_10.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_10.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_11.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_11.name }}</span></h3>
+	        				<span class="price">{{ menu_11.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_11.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_12.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_12.name }}</span></h3>
+	        				<span class="price">{{ menu_12.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_12.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+
+        	<div class="col-md-6">
+        		<h3 class="mb-5 heading-pricing ftco-animate">Напитки</h3>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_13.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_13.name }}</span></h3>
+	        				<span class="price">{{ menu_13.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_13.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_14.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_14.name }}</span></h3>
+	        				<span class="price">{{ menu_14.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_14.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_15.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_15.name }}</span></h3>
+	        				<span class="price">{{ menu_15.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_15.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        		<div class="pricing-entry d-flex ftco-animate">
+        			<div class="img" style="background-image: url({{ menu_16.image.url }})"></div>
+        			<div class="desc pl-3">
+	        			<div class="d-flex text align-items-center">
+	        				<h3><span>{{ menu_16.name }}</span></h3>
+	        				<span class="price">{{ menu_16.price }}</span>
+	        			</div>
+	        			<div class="d-block">
+	        				<p>{{ menu_16.description }}</p>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url({% static "coffee/images/bg_2.jpg" %});" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+        	<div class="col-md-10">
+        		<div class="row">
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-coffee-cup"></span></div>
+		              	<strong class="number" data-number="100">0</strong>
+		              	<span>Coffee Branches</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-coffee-cup"></span></div>
+		              	<strong class="number" data-number="85">0</strong>
+		              	<span>Number of Awards</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-coffee-cup"></span></div>
+		              	<strong class="number" data-number="10567">0</strong>
+		              	<span>Happy Customer</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		              	<div class="icon"><span class="flaticon-coffee-cup"></span></div>
+		              	<strong class="number" data-number="900">0</strong>
+		              	<span>Staff</span>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="popular" class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+          	<span class="subheading" style="font-family: 'Caveat', cursive; font-size: 40px; margin-bottom: -15px;">Попробуйте</span>
+            <h2 class="mb-4">Самое популярное</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-3">
+        		<div class="menu-entry">
+    					<a href="{{ popular_1.image.url }}" class="img" style="background-image: url({{ popular_1.image.url }})"></a>
+    					<div class="text text-center pt-4">
+    						<h3><a href="#">{{ popular_1.name }}</a></h3>
+    						<p>{{ popular_1.description }}</p>
+    						<p class="price"><span>{{ popular_1.price }}</span></p>
+    					</div>
+    				</div>
+        	</div>
+        	<div class="col-md-3">
+        		<div class="menu-entry">
+    					<a href="{{ popular_2.image.url }}" class="img" style="background-image: url({{ popular_2.image.url }})"></a>
+    					<div class="text text-center pt-4">
+    						<h3><a href="#">{{ popular_2.name }}</a></h3>
+    						<p>{{ popular_2.description }}</p>
+    						<p class="price"><span>{{ popular_2.price }}</span></p>
+    					</div>
+    				</div>
+        	</div>
+        	<div class="col-md-3">
+        		<div class="menu-entry">
+    					<a href="{{ popular_3.image.url }}" class="img" style="background-image: url({{ popular_3.image.url }})"></a>
+    					<div class="text text-center pt-4">
+    						<h3><a href="#">{{ popular_3.name }}</a></h3>
+    						<p>{{ popular_3.description }}</p>
+    						<p class="price"><span>{{ popular_3.price }}</span></p>
+    					</div>
+    				</div>
+        	</div>
+        	<div class="col-md-3">
+        		<div class="menu-entry">
+    					<a href="{{ popular_4.image.url }}" class="img" style="background-image: url({{ popular_4.image.url }})"></a>
+    					<div class="text text-center pt-4">
+    						<h3><a href="#">{{ popular_4.name }}</a></h3>
+    						<p>{{ popular_4.description }}</p>
+    						<p class="price"><span>{{ popular_4.price }}</span></p>
+    					</div>
+    				</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-gallery">
+    	<div class="container-wrap">
+    		<div class="row no-gutters">
+				{% for i in gallery %}
+					<div class="col-md-3 ftco-animate">
+						<a href="{{ i.image.url}}" class="gallery img d-flex align-items-center" style="background-image: url({{ i.image.url}})">
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+    						<span class="icon-search"></span>
+    					</div>
+						</a>
+					</div>
+				{% endfor %}
+
+        </div>
+    	</div>
+    </section>
+
+		<section class="ftco-menu">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+          	<span class="subheading" style="font-family: 'Caveat', cursive; font-size: 40px; margin-bottom: -15px;">Оцените</span>
+            <h2 class="mb-4">Наши блюда</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+    		<div class="row d-md-flex">
+	    		<div class="col-lg-12 ftco-animate p-md-5">
+		    		<div class="row">
+		          <div class="col-md-12 nav-link-wrap mb-5">
+		            <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Блюда</a>
+
+		              <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Напитки</a>
+
+		              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Десерты</a>
+		            </div>
+		          </div>
+		          <div class="col-md-12 d-flex align-items-center">
+
+		            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+		              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+		              	<div class="row">
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu9_1.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu9_1.image.url }})"></a>
+		              				<div class="text">
+		              					<h3><a href="#">{{ menu9_1.name }}</a></h3>
+		              					<p>{{ menu9_1.description }}</p>
+		              					<p class="price"><span>{{ menu9_1.price }}</span></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu9_2.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu9_2.image.url }})"></a>
+		              				<div class="text">
+		              					<h3><a href="#">{{ menu9_2.name }}</a></h3>
+		              					<p>{{ menu9_2.description }}</p>
+		              					<p class="price"><span>{{ menu9_2.price }}</span></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu9_3.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu9_3.image.url }})"></a>
+		              				<div class="text">
+		              					<h3><a href="#">{{ menu9_3.name }}</a></h3>
+		              					<p>{{ menu9_3.description }}</p>
+		              					<p class="price"><span>{{ menu9_3.price }}</span></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              	</div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+		                <div class="row">
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu9_4.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu9_4.image.url }})"></a>
+		              				<div class="text">
+		              					<h3><a href="#">{{ menu9_4.name }}</a></h3>
+		              					<p>{{ menu9_4.description }}</p>
+		              					<p class="price"><span>{{ menu9_4.price }}</span></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu9_5.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu9_5.image.url }})"></a>
+		              				<div class="text">
+		              					<h3><a href="#">{{ menu9_5.name }}</a></h3>
+		              					<p>{{ menu9_5.description }}</p>
+		              					<p class="price"><span>{{ menu9_5.price }}</span></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu9_6.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu9_6.image.url }})"></a>
+		              				<div class="text">
+		              					<h3><a href="#">{{ menu9_6.name }}</a></h3>
+		              					<p>{{ menu9_6.description }}</p>
+		              					<p class="price"><span>{{ menu9_6.price }}</span></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              	</div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+		                <div class="row">
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu9_7.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu9_7.image.url }})"></a>
+		              				<div class="text">
+		              					<h3><a href="#">{{ menu9_7.name }}</a></h3>
+		              					<p>{{ menu9_7.description }}</p>
+		              					<p class="price"><span>{{ menu9_7.price }}</span></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu9_8.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu9_8.image.url }})"></a>
+		              				<div class="text">
+		              					<h3><a href="#">{{ menu9_8.name }}</a></h3>
+		              					<p>{{ menu9_8.description }}</p>
+		              					<p class="price"><span>{{ menu9_8.price }}</span></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              		<div class="col-md-4 text-center">
+		              			<div class="menu-wrap">
+		              				<a href="{{ menu9_9.image.url }}" class="menu-img img mb-4" style="background-image: url({{ menu9_9.image.url }})"></a>
+		              				<div class="text">
+		              					<h3><a href="#">{{ menu9_9.name }}</a></h3>
+		              					<p>{{ menu9_9.description }}</p>
+		              					<p class="price"><span>{{ menu9_9.price }}</span></p>
+		              				</div>
+		              			</div>
+		              		</div>
+		              	</div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+    	</div>
+    </section>
+
+    <section id="testimonials" class="ftco-section img" id="ftco-testimony" style="background-image: url({% static "coffee/images/bg_1.jpg" %});"  data-stellar-background-ratio="0.5">
+    	<div class="overlay"></div>
+	    <div class="container">
+	      <div class="row justify-content-center mb-5">
+	        <div class="col-md-7 heading-section text-center ftco-animate">
+	        	<span class="subheading" style="font-family: 'Caveat', cursive; font-size: 40px; margin-bottom: -15px;">Отзывы</span>
+	          <h2 class="mb-4">посетителей</h2>
+	          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="container-wrap">
+	      <div class="row d-flex no-gutters">
+	        <div class="col-lg align-self-sm-end ftco-animate">
+	          <div class="testimony">
+	             <blockquote>
+	                <p>&ldquo;{{ testimonial_1.testimonial }}&rdquo;</p>
+	              </blockquote>
+	              <div class="author d-flex mt-4">
+	                <div class="image mr-3 align-self-center">
+	                  <img src="{{ testimonial_1.image.url }}" alt="">
+	                </div>
+	                <div class="name align-self-center">{{ testimonial_1.name }} <span class="position">{{ testimonial_1.who_is }}</span></div>
+	              </div>
+	          </div>
+	        </div>
+	        <div class="col-lg align-self-sm-end">
+	          <div class="testimony overlay">
+	             <blockquote>
+	                <p>&ldquo;{{ testimonial_2.testimonial }}&rdquo;</p>
+	              </blockquote>
+	              <div class="author d-flex mt-4">
+	                <div class="image mr-3 align-self-center">
+	                  <img src="{{ testimonial_2.image.url }}" alt="">
+	                </div>
+	                <div class="name align-self-center">{{ testimonial_2.name }} <span class="position">{{ testimonial_2.who_is }}</span></div>
+	              </div>
+	          </div>
+	        </div>
+	        <div class="col-lg align-self-sm-end ftco-animate">
+	          <div class="testimony">
+	             <blockquote>
+	                <p>&ldquo;{{ testimonial_3.testimonial }}&rdquo;</p>
+	              </blockquote>
+	              <div class="author d-flex mt-4">
+	                <div class="image mr-3 align-self-center">
+	                  <img src="{{ testimonial_3.image.url }}" alt="">
+	                </div>
+	                <div class="name align-self-center">{{ testimonial_3.name }} <span class="position">{{ testimonial_3.who_is }}</span></div>
+	              </div>
+	          </div>
+	        </div>
+	        <div class="col-lg align-self-sm-end">
+	          <div class="testimony overlay">
+	             <blockquote>
+	                <p>&ldquo;{{ testimonial_4.testimonial }}&rdquo;</p>
+	              </blockquote>
+	              <div class="author d-flex mt-4">
+	                <div class="image mr-3 align-self-center">
+	                  <img src="{{ testimonial_4.image.url }}" alt="">
+	                </div>
+	                <div class="name align-self-center">{{ testimonial_4.name }} <span class="position">{{ testimonial_4.who_is }}</span></div>
+	              </div>
+	          </div>
+	        </div>
+	        <div class="col-lg align-self-sm-end ftco-animate">
+	          <div class="testimony">
+	            <blockquote>
+	              <p>&ldquo;{{ testimonial_5.testimonial }}&rdquo;</p>
+	            </blockquote>
+	            <div class="author d-flex mt-4">
+	              <div class="image mr-3 align-self-center">
+	                <img src="{{ testimonial_5.image.url }}" alt="">
+	              </div>
+	              <div class="name align-self-center">{{ testimonial_5.name }} <span class="position">{{ testimonial_5.who_is }}</span></div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </section>
+
+            <p style="text-align: center; margin-top: 20px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Сайт создан <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> на базе шаблона <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static "coffee/js/jquery.min.js" %}"></script>
+  <script src="{% static "coffee/js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "coffee/js/popper.min.js" %}"></script>
+  <script src="{% static "coffee/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "coffee/js/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "coffee/js/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "coffee/js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "coffee/js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "coffee/js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "coffee/js/aos.js" %}"></script>
+  <script src="{% static "coffee/js/jquery.animateNumber.min.js" %}"></script>
+  <script src="{% static "coffee/js/bootstrap-datepicker.js" %}"></script>
+  <script src="{% static "coffee/js/jquery.timepicker.min.js" %}"></script>
+  <script src="{% static "coffee/js/scrollax.min.js" %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static "coffee/js/google-map.js" %}"></script>
+  <script src="{% static "coffee/js/main.js" %}"></script>
+
+  </body>
+</html>

@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+<title>The Venue</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="The Venue template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/bootstrap-4.1.2/bootstrap.min.css" %}">
+<link href="{% static "venue/plugins/font-awesome-4.7.0/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static "venue/plugins/OwlCarousel2-2.2.1/owl.carousel.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/plugins/OwlCarousel2-2.2.1/owl.theme.default.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/plugins/OwlCarousel2-2.2.1/animate.css" %}">
+<link href="{% static "venue/plugins/colorbox/colorbox.css" %}" rel="stylesheet" type="text/css" >
+<link href="{% static "venue/plugins/jquery-datepicker/jquery-ui.css" %}" rel="stylesheet" type="text/css" >
+<link href="{% static "venue/plugins/jquery-timepicker/jquery.timepicker.css" %}" rel="stylesheet" type="text/css" >
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/main_styles.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/responsive.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/menu.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/menu_responsive.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/about.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "venue/styles/sign.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "venue/styles/about_responsive.css" %}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@1&family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="logo">
+							<a href="#" style="letter-spacing: 0.4em">
+								<div>Venue</div>
+								<div>ресторан</div>
+							</a>
+						</div>
+						<nav class="main_nav">
+							<ul class="d-flex flex-row align-items-center justify-content-start">
+								<li><a href="{{ venue.url }}">начало</a></li>
+								<li><a href="#menu">меню</a></li>
+								<li><a href="#team">команда</a></li>
+								<li><a href="#testi">отзывы</a></li>
+								<li><a href="#reservation">заказ столика</a></li>
+							</ul>
+						</nav>
+						<div class="reservations_phone ml-auto">Бронирование: {{ text.reservation_phone }}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Hamburger -->
+
+<!--	<div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">-->
+<!--		<div class="hamburger">-->
+<!--			<div class="menu_toggle d-flex flex-row align-items-center justify-content-start">-->
+<!--				<span>menu</span>-->
+<!--				<div class="hamburger_container">-->
+<!--					<div class="menu_hamburger">-->
+<!--						<div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>-->
+<!--						<div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>-->
+<!--						<div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</div>-->
+
+	<!-- Menu -->
+
+	<div class="menu trans_800">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<ul>
+				<li><a href="{{ venue.url }}">home</a></li>
+				<li><a href="#menu">меню</a></li>
+				<li><a href="#team">команда</a></li>
+				<li><a href="#testi">отзывы</a></li>
+				<li><a href="#reservation">заказ столика</a></li>
+			</ul>
+		</div>
+		<div class="menu_reservations_phone ml-auto">Бронирование: {{ text.reservation_phone }}</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ image.top_fon_image.url }}" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content text-center">
+							<div class="home_subtitle page_subtitle" style="font-family: 'Cormorant Infant', serif;">{{ text.first_title }}</div>
+							<div class="home_title"><h1>{{ text.second_title }}</h1></div>
+							<div class="home_text ml-auto mr-auto">
+								<p>{{ text.third_title }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Intro -->
+
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="intro_content">
+						<div class="intro_subtitle page_subtitle" style="font-size: 28px; font-family: 'Cormorant Infant', serif;">{{ text.first_text_section_1 }}</div>
+						<div class="intro_title"><h2>{{ text.second_text_section_1 }}</h2></div>
+						<div class="intro_text">
+							<p>{{ text.third_text_section_1 }}</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-4 col-md-6 intro_col">
+							<div class="intro_image"><img src="{{ image.first_image_section_1.url }}"></div>
+						</div>
+						<div class="col-xl-4 col-md-6 intro_col">
+							<div class="intro_image"><img src="{{ image.second_image_section_1.url }}"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Video -->
+
+	<div class="video_section">
+		<div class="background_image" style="background-image:url({{ image.video_preview.url }})"></div>
+		<div class="video_section_content d-flex flex-column align-items-center justify-content-center text-center">
+			<div class="video_section_title">{{ image.video_name }}</div>
+
+			<div class="video_section_icon">
+				<a class="vimeo video_button" href="https://www.youtube.com/embed/{{ image.video_link }}"><i class="fa fa-play" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hit Dish -->
+
+	<div class="sig">
+		<div class="sig_content_container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="sig_content">
+							<div class="sig_subtitle page_subtitle" style="font-size: 28px; font-family: 'Cormorant Infant', serif;">{{ hit.slogan }}</div>
+							<div class="sig_title"><h1>{{ hit.title }}</h1></div>
+							<div class="rating_r sig_rating rating_r_5"><i></i><i></i><i></i><i></i><i></i></div>
+							<div class="sig_name_container d-flex flex-row align-items-start justify-content-start">
+								<div class="sig_name">{{ hit.name }}</div>
+								<div class="sig_price ml-auto">{{ hit.price }}</div>
+							</div>
+							<div class="sig_content_list">
+								<ul class="d-flex flex-row align-items-center justify-content-start">
+									<li>{{ hit.contents_1 }}</li>
+									<li>{{ hit.contents_2 }}</li>
+									<li>{{ hit.contents_3 }}</li>
+									<li>{{ hit.contents_4 }}</li>
+								</ul>
+							</div>
+							<div class="button sig_button trans_200"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sig_image_container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 offset-lg-5">
+						<div class="sig_image">
+							<div class="background_image" style="background-image:url({{ hit.image.url }})"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- The Menu -->
+
+	<div id='menu' class="themenu">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="section_subtitle page_subtitle" style="font-size: 28px; font-family: 'Cormorant Infant', serif;">{{ text.menu_slogan }}</div>
+						<div class="section_title"><h1>{{ text.menu_name }}</h1></div>
+					</div>
+				</div>
+			</div>
+			<div class="row themenu_text_row">
+				<div class="col-lg-6">
+					<div class="themenu_text">
+						<p>{{ text.menu_intro_1  }}</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="themenu_text">
+						<p>{{ text.menu_intro_2 }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="row themenu_row">
+
+				<!-- Starters -->
+				<div class="col-lg-4 themenu_column">
+					<div class="themenu_image"><img src="{{ image.img_1.url }}"></div>
+					<div class="themenu_col trans_400">
+						<div class="themenu_col_title">Закуски</div>
+						<div class="dish_list">
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_1.name }}</div>
+									<div class="dish_price">{{ dish_1.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_1.contents_1 }}</li>
+										<li>{{ dish_1.contents_2 }}</li>
+										<li>{{ dish_1.contents_3 }}</li>
+										<li>{{ dish_1.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_2.name }}</div>
+									<div class="dish_price">{{ dish_2.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_2.contents_1 }}</li>
+										<li>{{ dish_2.contents_2 }}</li>
+										<li>{{ dish_2.contents_3 }}</li>
+										<li>{{ dish_2.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_3.name }}</div>
+									<div class="dish_price">{{ dish_3.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_3.contents_1 }}</li>
+										<li>{{ dish_3.contents_2 }}</li>
+										<li>{{ dish_3.contents_3 }}</li>
+										<li>{{ dish_3.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_4.name }}</div>
+									<div class="dish_price">{{ dish_4.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_4.contents_1 }}</li>
+										<li>{{ dish_4.contents_2 }}</li>
+										<li>{{ dish_4.contents_3 }}</li>
+										<li>{{ dish_4.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_5.name }}</div>
+									<div class="dish_price">{{ dish_5.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_5.contents_1 }}</li>
+										<li>{{ dish_5.contents_2 }}</li>
+										<li>{{ dish_5.contents_3 }}</li>
+										<li>{{ dish_5.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Main -->
+				<div class="col-lg-4 themenu_column">
+					<div class="themenu_image"><img src="{{ image.img_2.url }}"></div>
+					<div class="themenu_col trans_400">
+						<div class="themenu_col_title">Горячее</div>
+						<div class="dish_list">
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_6.name }}</div>
+									<div class="dish_price">{{ dish_6.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_6.contents_1 }}</li>
+										<li>{{ dish_6.contents_2 }}</li>
+										<li>{{ dish_6.contents_3 }}</li>
+										<li>{{ dish_6.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_7.name }}</div>
+									<div class="dish_price">{{ dish_7.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_7.contents_1 }}</li>
+										<li>{{ dish_7.contents_2 }}</li>
+										<li>{{ dish_7.contents_3 }}</li>
+										<li>{{ dish_7.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_8.name }}</div>
+									<div class="dish_price">{{ dish_8.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_8.contents_1 }}</li>
+										<li>{{ dish_8.contents_2 }}</li>
+										<li>{{ dish_8.contents_3 }}</li>
+										<li>{{ dish_8.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_9.name }}</div>
+									<div class="dish_price">{{ dish_9.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_9.contents_1 }}</li>
+										<li>{{ dish_9.contents_2 }}</li>
+										<li>{{ dish_9.contents_3 }}</li>
+										<li>{{ dish_9.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_10.name }}</div>
+									<div class="dish_price">{{ dish_10.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_10.contents_1 }}</li>
+										<li>{{ dish_10.contents_2 }}</li>
+										<li>{{ dish_10.contents_3 }}</li>
+										<li>{{ dish_10.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Deserts -->
+				<div class="col-lg-4 themenu_column">
+					<div class="themenu_image"><img src="{{ image.img_3.url }}"></div>
+					<div class="themenu_col trans_400">
+						<div class="themenu_col_title">Десерты</div>
+						<div class="dish_list">
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_11.name }}</div>
+									<div class="dish_price">{{ dish_11.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_11.contents_1 }}</li>
+										<li>{{ dish_11.contents_2 }}</li>
+										<li>{{ dish_11.contents_3 }}</li>
+										<li>{{ dish_11.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_12.name }}</div>
+									<div class="dish_price">{{ dish_12.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_12.contents_1 }}</li>
+										<li>{{ dish_12.contents_2 }}</li>
+										<li>{{ dish_12.contents_3 }}</li>
+										<li>{{ dish_12.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_13.name }}</div>
+									<div class="dish_price">{{ dish_13.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_13.contents_1 }}</li>
+										<li>{{ dish_13.contents_2 }}</li>
+										<li>{{ dish_13.contents_3 }}</li>
+										<li>{{ dish_13.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_14.name }}</div>
+									<div class="dish_price">{{ dish_14.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_14.contents_1 }}</li>
+										<li>{{ dish_14.contents_2 }}</li>
+										<li>{{ dish_14.contents_3 }}</li>
+										<li>{{ dish_14.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+							<!-- Dish -->
+							<div class="dish">
+								<div class="dish_title_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
+									<div class="dish_title">{{ dish_15.name }}</div>
+									<div class="dish_price">{{ dish_15.price }}</div>
+								</div>
+								<div class="dish_contents">
+									<ul class="d-flex flex-row align-items-start justify-content-start flex-wrap">
+										<li>{{ dish_15.contents_1 }}</li>
+										<li>{{ dish_15.contents_2 }}</li>
+										<li>{{ dish_15.contents_3 }}</li>
+										<li>{{ dish_15.contents_4 }}</li>
+									</ul>
+								</div>
+								<div class="dish_order"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Signature Dishes 2 -->
+
+	<div class="sign">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container">
+						<div class="section_subtitle page_subtitle" style="font-size: 28px; font-family: 'Cormorant', 'Cormorant Infant', serif;">{{ text.sign_menu_slogan }}</div>
+						<div class="section_title"><h1>{{ text.sign_menu_name }}</h1></div>
+					</div>
+				</div>
+			</div>
+			<div class="row sign_row">
+				<div class="col">
+
+					<!-- Signature Dish -->
+					<div class="sign_dish">
+						<div class="row row-eq-height">
+							<div class="col-lg-6 sign_col d-flex flex-column align-items-start justify-content-center">
+								<div class="sign_content">
+									<div class="rating_r sign_rating rating_r_5"><i></i><i></i><i></i><i></i><i></i></div>
+									<div class="sign_name_container d-flex flex-row align-items-start justify-content-start">
+										<div class="sign_name">{{ sign_dish_1.name }}</div>
+										<div class="sign_price ml-auto">{{ sign_dish_1.price }}</div>
+									</div>
+									<div class="sign_content_list">
+										<ul class="d-flex flex-row align-items-center justify-content-start">
+											<li>{{ sign_dish_1.contents_1 }}</li>
+											<li>{{ sign_dish_1.contents_2 }}</li>
+											<li>{{ sign_dish_1.contents_3 }}</li>
+											<li>{{ sign_dish_1.contents_4 }}</li>
+										</ul>
+									</div>
+									<div class="button sign_button trans_200" style="margin-bottom: 50px;"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+								</div>
+							</div>
+							<div class="col-lg-6 sign_col">
+								<div class="sign_image"><img src="{{ sign_dish_1.sign_img.url }}"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Signature Dish -->
+					<div class="sign_dish">
+						<div class="row row-eq-height">
+							<div class="col-lg-6 sign_col d-flex flex-column align-items-start justify-content-center">
+								<div class="sign_content">
+									<div class="rating_r sign_rating rating_r_5"><i></i><i></i><i></i><i></i><i></i></div>
+									<div class="sign_name_container d-flex flex-row align-items-start justify-content-start">
+										<div class="sign_name">{{ sign_dish_2.name }}</div>
+										<div class="sign_price ml-auto">{{ sign_dish_2.price }}</div>
+									</div>
+									<div class="sign_content_list">
+										<ul class="d-flex flex-row align-items-center justify-content-start">
+											<li>{{ sign_dish_2.contents_1 }}</li>
+											<li>{{ sign_dish_2.contents_2 }}</li>
+											<li>{{ sign_dish_2.contents_3 }}</li>
+											<li>{{ sign_dish_2.contents_4 }}</li>
+										</ul>
+									</div>
+									<div class="button sign_button trans_200" style="margin-bottom: 50px;"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+								</div>
+							</div>
+							<div class="col-lg-6 sign_col">
+								<div class="sign_image"><img src="{{ sign_dish_2.sign_img.url }}"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Signature Dish -->
+					<div class="sign_dish">
+						<div class="row row-eq-height">
+							<div class="col-lg-6 sign_col d-flex flex-column align-items-start justify-content-center">
+								<div class="sign_content">
+									<div class="rating_r sign_rating rating_r_5"><i></i><i></i><i></i><i></i><i></i></div>
+									<div class="sign_name_container d-flex flex-row align-items-start justify-content-start">
+										<div class="sign_name">{{ sign_dish_3.name }}</div>
+										<div class="sign_price ml-auto">{{ sign_dish_3.price }}</div>
+									</div>
+									<div class="sign_content_list">
+										<ul class="d-flex flex-row align-items-center justify-content-start">
+											<li>{{ sign_dish_3.contents_1 }}</li>
+											<li>{{ sign_dish_3.contents_2 }}</li>
+											<li>{{ sign_dish_3.contents_3 }}</li>
+											<li>{{ sign_dish_3.contents_4 }}</li>
+										</ul>
+									</div>
+									<div class="button sign_button trans_200" style="margin-bottom: 50px;"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+								</div>
+							</div>
+							<div class="col-lg-6 sign_col">
+								<div class="sign_image"><img src="{{ sign_dish_3.sign_img.url }}"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Signature Dish -->
+					<div class="sign_dish">
+						<div class="row row-eq-height">
+							<div class="col-lg-6 sign_col d-flex flex-column align-items-start justify-content-center">
+								<div class="sign_content">
+									<div class="rating_r sign_rating rating_r_5"><i></i><i></i><i></i><i></i><i></i></div>
+									<div class="sign_name_container d-flex flex-row align-items-start justify-content-start">
+										<div class="sign_name">{{ sign_dish_4.name }}</div>
+										<div class="sign_price ml-auto">{{ sign_dish_4.price }}</div>
+									</div>
+									<div class="sign_content_list">
+										<ul class="d-flex flex-row align-items-center justify-content-start">
+											<li>{{ sign_dish_4.contents_1 }}</li>
+											<li>{{ sign_dish_4.contents_2 }}</li>
+											<li>{{ sign_dish_4.contents_3 }}</li>
+											<li>{{ sign_dish_4.contents_4 }}</li>
+										</ul>
+									</div>
+									<div class="button sign_button trans_200" style="margin-bottom: 50px;"><a href="#" data-toggle="modal" data-target="#exampleModal">Заказать домой</a></div>
+								</div>
+							</div>
+							<div class="col-lg-6 sign_col">
+								<div class="sign_image"><img src="{{ sign_dish_4.sign_img.url }}"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Chefs -->
+
+	<div id="team" class="chefs">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container" style="text-align: center;">
+						<div class="section_subtitle page_subtitle" style="font-size: 28px; font-family: 'Cormorant Infant', serif;">{{ team.slogan }}</div>
+						<div class="section_title"><h1>{{ team.name }}</h1></div>
+					</div>
+				</div>
+			</div>
+			<div class="row chefs_text_row">
+				<div class="col-lg-6">
+					<div class="chefs_text">
+						<p>{{ team.team_intro_1 }}</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="chefs_text">
+						<p>{{ team.team_intro_2 }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="row chefs_row row-eq-height">
+
+				<!-- Chef -->
+				<div class="col-xl-3 col-md-6 chef_col d-flex flex-column align-items-center justify-content-end">
+					<div class="chef">
+						<div class="chef_image"><img src="{{ team.img_1.url }}"></div>
+						<div class="chef_content text-center">
+							<div class="chef_name">{{ team.name_1 }}</div>
+							<div class="chef_subtitle">{{ team.post_1 }}</div>
+							<div class="chef_button ml-auto mr-auto trans_400"><a href="#">подробнее</a></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Chef -->
+				<div class="col-xl-3 col-md-6 chef_col d-flex flex-column align-items-center justify-content-end">
+					<div class="chef">
+						<div class="chef_image"><img src="{{ team.img_2.url }}"></div>
+						<div class="chef_content text-center">
+							<div class="chef_name">{{ team.name_2 }}</div>
+							<div class="chef_subtitle">{{ team.post_2 }}</div>
+							<div class="chef_button ml-auto mr-auto trans_400"><a href="#">подробнее</a></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Chef -->
+				<div class="col-xl-3 col-md-6 chef_col d-flex flex-column align-items-center justify-content-end">
+					<div class="chef">
+						<div class="chef_image"><img src="{{ team.img_3.url }}"></div>
+						<div class="chef_content text-center">
+							<div class="chef_name">{{ team.name_3 }}</div>
+							<div class="chef_subtitle">{{ team.post_3 }}</div>
+							<div class="chef_button ml-auto mr-auto trans_400"><a href="#">подробнее</a></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Chef -->
+				<div class="col-xl-3 col-md-6 chef_col d-flex flex-column align-items-center justify-content-end">
+					<div class="chef">
+						<div class="chef_image"><img src="{{ team.img_4.url }}"></div>
+						<div class="chef_content text-center">
+							<div class="chef_name">{{ team.name_4 }}</div>
+							<div class="chef_subtitle">{{ team.post_4 }}</div>
+							<div class="chef_button ml-auto mr-auto trans_400"><a href="#">подробнее</a></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Testimonials -->
+
+	<div id="testi" class="testimonials">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ testi.image.url }}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title_container">
+						<div class="section_subtitle page_subtitle" style="font-size: 28px; font-family: 'Cormorant Infant', serif;">{{ testi.slogan }}</div>
+						<div class="section_title"><h1>{{ testi.name }}</h1></div>
+					</div>
+				</div>
+			</div>
+			<div class="row testimonials_row">
+				<div class="col-lg-10 offset-lg-1">
+
+					<!-- Testimonials Slider -->
+					<div class="test_slider_container">
+						<div class="owl-carousel owl-theme test_slider">
+
+							<!-- Slide -->
+
+							{% for i in testimonials %}
+							<div class="owl-item text-center">
+								<div class="quote ml-auto mr-auto"><img src="{% static "venue/images/quote.png" alt="" %}"></div>
+								<div class="test_text">
+									<p>{{ i.testimonial }}</p>
+								</div>
+								<div class="test_info">{{ i.person }}, <span>{{ i.who_is }}</span></div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Reservations -->
+
+	<div id="reservation" class="reservations text-center">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{ image.bottom_fon_image.url }}"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="reservations_content d-flex flex-column align-items-center justify-content-center">
+						<div class="res_stars page_subtitle"></div>
+						<div class="res_title">Заказ столика</div>
+						<div class="res_form_container">
+							<form action="venue_res" id="res_form" class="res_form" method="POST">
+								{% csrf_token %}
+								<div class="d-flex flex-sm-row flex-column align-items-center justify-content-start">
+									<input type="text" class="res_input" style="font-size: 20px;" name="name" placeholder="ФИО" required="required">
+									<input type="text" class="res_input" style="font-size: 20px;" name = "phone" placeholder="Телефон" required="required">
+									<input type="text" class="res_input" style="font-size: 20px;" name = "date" placeholder="Дата, время" required="required">
+									<input type="text" class="res_input" style="font-size: 20px;" name = "number" placeholder="Сколько персон" required="required">
+								</div>
+								<button class="res_button">Забронировать</button>
+							</form>
+							<a href="{{ text.download_menu.url }}" download>
+							<button class="res_button" style="margin-top: 20px;">Скачать меню</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<!-- Footer Logo -->
+				<div class="col-lg-3 footer_col">
+					<div class="footer_logo">
+						<div class="footer_logo_title" >Venue</div>
+						<div class="footer_logo_subtitle" style="letter-spacing: 0.4em;">ресторан</div>
+					</div>
+
+				</div>
+
+				<!-- Footer About -->
+				<div class="col-lg-6 footer_col">
+					<div class="footer_about">
+						<p>{{ text.footer_text }}</p>
+					</div>
+				</div>
+
+				<!-- Footer Contact -->
+				<div class="col-lg-3 footer_col">
+					<div class="footer_contact">
+						<ul>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div><div class="footer_contact_title">Адрес:</div></div>
+								<div class="footer_contact_text">{{ text.footer_address }}</div>
+							</li>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div><div class="footer_contact_title">Тел.:</div></div>
+								<div class="footer_contact_text">{{ text.footer_phone }}</div>
+							</li>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div><div class="footer_contact_title">Емейл:</div></div>
+								<div class="footer_contact_text">{{ text.footer_email }}</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright" style="text-align: center; margin-top: 50px;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<p style="line-height: 1.2;">Сайт создан <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> на базе шаблона <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+	</footer>
+
+</div>
+
+<script src="{% static "venue/js/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "venue/styles/bootstrap-4.1.2/popper.js" %}"></script>
+<script src="{% static "venue/styles/bootstrap-4.1.2/bootstrap.min.js" %}"></script>
+<script src="{% static "venue/plugins/greensock/TweenMax.min.js" %}"></script>
+<script src="{% static "venue/plugins/greensock/TimelineMax.min.js" %}"></script>
+<script src="{% static "venue/plugins/scrollmagic/ScrollMagic.min.js" %}"></script>
+<script src="{% static "venue/plugins/greensock/animation.gsap.min.js" %}"></script>
+<script src="{% static "venue/plugins/greensock/ScrollToPlugin.min.js" %}"></script>
+<script src="{% static "venue/plugins/OwlCarousel2-2.2.1/owl.carousel.js" %}"></script>
+<script src="{% static "venue/plugins/easing/easing.js" %}"></script>
+<script src="{% static "venue/plugins/parallax-js-master/parallax.min.js" %}"></script>
+<script src="{% static "venue/plugins/colorbox/jquery.colorbox-min.js" %}"></script>
+<script src="{% static "venue/plugins/jquery-datepicker/jquery-ui.js" %}"></script>
+<script src="{% static "venue/plugins/jquery-timepicker/jquery.timepicker.js" %}"></script>
+<script src="{% static "venue/js/custom.js" %}"></script>
+<script src="{% static "venue/js/about.js" %}"></script>
+<script src="{% static "venue/js/menu.js" %}"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel" style="color: gray;">Форма заказа</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="venue_feedback" method="POST">
+        {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" placeholder="Имя" required="">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name = "phone" placeholder="Телефон" required="">
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" name="massage" rows="3" placeholder="Информация по заказу" required=""></textarea>
+            </div>
+            <!-- end of form-group -->
+            <input type="submit" value="Отправить" class="btn btn-secondary">
+        </form>
+      </div>
+      <div class="modal-footer">
+        Отправляя заказ, вы соглашаетесь на обработку персональных данных.
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

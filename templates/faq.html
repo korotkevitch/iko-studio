@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Ответы на часто задаваемые вопросы{% endblock %}
+
+<head>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(76317934, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/76317934" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    {% block meta_extend %}{% endblock %}
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+{% block content %}
+
+        <!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+				<div class="container">
+					<div class="banner_content">
+						<h2>Вопросы и ответы</h2>
+						<div class="page_link">
+							<a href="{% url 'index' %}">Главная</a>
+                            <a href="#">FAQ</a>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+
+        <!--================Project Area =================-->
+<br>
+    <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" >
+            <h2 class="section-title mb-3" style="color:#000000;">Информация для клиентов</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-5" >
+            <h3 class="text-black h5 mb-4" style="color:#000000;">Адаптированы ли шаблоны для мобильных устройств?</h3>
+            <p>Все шаблоны отлично выглядят и работают на гаджетах с любым разрешением экрана, в чем вы легко можете убедиться.</p>
+
+              <h3 class="text-black h5 mb-4" style="color:#000000;">Какая CMS используется?</h3>
+            <p>Сайты работают на Django. Если у вас есть планы размещать сайт на своем хостинге, он должен поддерживать Python + Django.</p>
+
+              <h3 class="text-black h5 mb-4" style="color:#000000;">Контекстная реклама (если заказано сопровождение сайта) создается как для Яндекса, так и для Гугла?</h3>
+            <p>Да, для обеих систем. Раз в месяц мы будем предоставлять подробный отчет о показах, кликах, конверсиях и соцдеме посетителей.</p>
+
+              <h3 class="text-black h5 mb-4" style="color:#000000;">Обязательно ли менять все фотографии шаблона?</h3>
+            <p>Фотографии, использованные в шаблонах, разрешены их авторами к бесплатному коммерческому использованию, поэтому можете оставить, если они вам нравятся. Или подыскать другие на таких сайтах, как pexels.com, pngwing.com и др.</p>
+
+
+
+          </div>
+
+            <div class="col-lg-6 mb-5" >
+
+                <h3 class="text-black h5 mb-4" style="color:#000000;">Чем отличаются ваши сайты на базе готовых шаблонов от сайтов, сделанных на заказ?</h3>
+            <p>Большой разницей в цене. Если вы только начинаете привлекать клиентов через Интернет, нет смысла переплачивать. Сначала поймите, как в вашем бизнесе благодаря сети увеличить прибыль, а потом вкладывайтесь в разработку эксклюзивного сайта.</p>
+
+              <h3 class="text-black h5 mb-4" style="color:#000000;">Если мне не подошел ни один из предложенных в Каталоге шаблонов, можете ли вы создать лендинг на базе моего шаблона?</h3>
+            <p>Да. Вы можете предложить свой html-шаблон, и на его основе мы создадим ваш сайт. Само собой разумеется, что такой шаблон должен быть настроен и адаптирован для устройств с разным разрешением экрана.</p>
+
+                <h3 class="text-black h5 mb-4" style="color:#000000;">Вносите ли вы изменения в шаблоны по запросу клиента?</h3>
+            <p>На этапе создания лендинга можем добавить или убрать отдельные блоки, изменить навигацию и сделать другие незначительные доработки.
+            Существенная переработка шаблона осуществляется за отдельную плату.</p>
+
+          </div>
+          </div>
+          </div>
+        </div>
+
+        <!--================End Project Area =================-->
+
+        <!--================Project Details Area =================-->
+        <section class="project_know_area p_120">
+        	<div class="container">
+        		<div class="project_know_inner text-center">
+        			<h3>Нужен сайт быстро и недорого?</h3>
+        			<p>Создадим лендинг, разместим на хостинге, предоставим доступ в админку для самостоятельной замены контента.
+					Первичное размещение текстов и фотографий делаем мы.</p>
+        			<p><a href="#" class="white_btn" data-toggle="modal" data-target="#exampleModal">Заказать сайт</a></p>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Project Details Area =================-->
+
+{% endblock content %}
+
+</body>

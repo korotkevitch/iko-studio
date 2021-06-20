@@ -1,0 +1,798 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Шаблон сайта компании "Constructo", специализирующейся на ремонте квартир и офисов</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static "constructo/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "constructo/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "constructo/css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "constructo/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "constructo/css/themify-icons.css" %}">
+    <link rel="stylesheet" href="{% static "constructo/css/gijgo.css" %}">
+    <link rel="stylesheet" href="{% static "constructo/css/nice-select.css" %}">
+    <link rel="stylesheet" href="{% static "constructo/css/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "constructo/css/slicknav.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery.fancybox.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "constructo/css/style.css" %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area d-none d-lg-block">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-5 col-md-5 ">
+                            <div class="header_left">
+                                <p>Время работы: 9.00-20.00</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-md-7">
+                            <div class="header_right d-flex justify-content-end">
+                                <a href="#" class="boxed-btn3">Узнать стоимость</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="address_bar d-none d-lg-block">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="{{ constructo.url }}">
+                                    <img src="{% static "constructo/img/logo.png" %}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="address_menu d-flex justify-content-end">
+                                <div class="single_address  d-flex">
+                                    <div class="icon">
+                                        <img src="{% static "constructo/img/icon/header-address.svg" %}" alt="">
+                                    </div>
+                                    <div class="address_info">
+                                        <h3>Адрес</h3>
+                                        <p>г.Чехов, ул.Жукова,3</p>
+                                    </div>
+                                </div>
+                                <div class="single_address d-flex">
+                                    <div class="icon">
+                                        <img src="{% static "constructo/img/icon/headset.svg" %}" alt="">
+                                    </div>
+                                    <div class="address_info">
+                                        <h3>Тел.:</h3>
+                                        <p>+7 000 000-00-00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="white_bg_bar">
+                        <div class="row align-items-center">
+                            <div class="col-12 d-lg-none">
+                                <div class="logo ">
+                                    <a href="#">
+                                        <img src="{% static "constructo/img/logo.png" %}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a class="active" href="{{ constructo.url }}">Начало</a></li>
+                                            <li><a href="#about">О нас</a></li>
+                                            <li><a href="#services">Услуги</a></li>
+                                            <li><a href="#gallery">Галерея</a></li>
+                                            <li><a href="#film">Фильм</a></li>
+                                            <li><a href="#testimonials">Отзывы</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider  d-flex align-items-center slider_bg_1 overlay">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-9 col-md-9 col-md-12">
+                            <div class="slider_text text-center">
+                                <h3>Евроремонт <br> по низким ценам</h3>
+                                <p>Превратим вашу квартиру или дом в картинку.</p>
+                                <a href="#" class="boxed-btn3">Скачать презентацию</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center slider_bg_2 overlay">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-9 col-md-9 col-md-12">
+                            <div class="slider_text text-center">
+                                <h3>Евроремонт <br> по низким ценам</h3>
+                                <p>Превратим вашу квартиру или дом в картинку.</p>
+                                <a href="#" class="boxed-btn3">Скачать презентацию</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+
+    <!-- features_area_start -->
+    <div id="about" class="features_area">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-md-4">
+                    <div class="single_feature text-center">
+                        <div class="icon">
+                            <i class="flaticon-sketch"></i>
+                        </div>
+                        <h3>Подробные план и смета</h3>
+                        <p>До начала работ мы согласуем план, график и смету, чтобы вы четко представляли стоимость и сроки.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="single_feature text-center">
+                        <div class="icon">
+                            <i class="flaticon-helmet"></i>
+                        </div>
+                        <h3>Талантливые рабочие</h3>
+                        <p>У нас не работают люди с улицы. Все специалисты прошли тщательный отбор и дополнительное обучение.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="single_feature text-center">
+                        <div class="icon">
+                            <i class="flaticon-support"></i>
+                        </div>
+                        <h3>Лучшие инструменты</h3>
+                        <p>В работе мы используем лучшие инструменты и оборудование, чтобы ремонт был максимально комфортным.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- features_area_end -->
+
+    <!-- about_area_start  -->
+    <div class="about_area">
+        <div class="container">
+            <div class="border_1px">
+                <div class="row align-items-center">
+                    <div class="col-xl-6  col-md-6">
+                        <div class="about_thumb">
+                            <img src="{% static "constructo/img/about/about.png" %}" alt="">
+                            <div class="pattern_img d-none d-lg-block">
+                                <img src="{% static "constructo/img/pattern/pattern.svg" %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                        <div class="about_info">
+                            <h3>Гарантия качества </h3>
+                            <p class="first_para"> “В этом разделе можно указать, какие гарантии на какие виды работ
+                            вы предлагаете своим заказчикам. Это добавит привлекательности вашим предложениям и будет
+                            способствовать более активной работе "сарафанного радио".</p>
+                            <p>Здесь можно скромно указать, что на рынке ремонтных услуг в сегменте "эконом" никто из
+                            ваших конкурентов не предлагает ничего похожего. Наличие такого "бонуса" будет способствовать
+                            успеху вашего коммерческого предложения.</p>
+                            <a href="about.html" class="boxed-btn3">Скачать презентацию</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- about_area_end  -->
+
+    <!-- service_area_start  -->
+    <div id="services" class="service_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-50">
+                        <h3>Наши услуги</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="border_bottom_1px position-relative">
+                <div class="pattern_img d-none d-xl-block">
+                    <img src="{% static "constructo/img/pattern/pattern.png" %}" alt="">
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="service_active owl-carousel">
+                            <div class="single_service">
+                                <div class="thumb">
+                                    <img src="{% static "constructo/img/service/1.jpg" %}" alt="">
+                                </div>
+                                <div class="service_info">
+                                    <a href="#">
+                                        <h3>Устройство полов </h3>
+                                    </a>
+                                    <p>Стяжка пола, укладка паркета, массивной доски, ламината, плитки.</p>
+                                </div>
+                            </div>
+                            <div class="single_service">
+                                <div class="thumb">
+                                    <img src="{% static "constructo/img/service/2.jpg" %}" alt="">
+                                </div>
+                                <div class="service_info">
+                                    <a href="#">
+                                        <h3>Потолок, стены</h3>
+                                    </a>
+                                    <p>Штукатурка, покраска, обои, плитка, светильники, полки.</p>
+                                </div>
+                            </div>
+                            <div class="single_service">
+                                <div class="thumb">
+                                    <img src="{% static "constructo/img/service/3.jpg" %}" alt="">
+                                </div>
+                                <div class="service_info">
+                                    <a href="#">
+                                        <h3>Сборка мебели</h3>
+                                    </a>
+                                    <p>Доставка, подъем на этаж, сборка и расстановка мебели.</p>
+                                </div>
+                            </div>
+                            <div class="single_service">
+                                <div class="thumb">
+                                    <img src="{% static "constructo/img/service/4.jpg" %}" alt="">
+                                </div>
+                                <div class="service_info">
+                                    <a href="#">
+                                        <h3>Сантехника </h3>
+                                    </a>
+                                    <p>Установка новой и устранение проблем действующей сантехники.</p>
+                                </div>
+                            </div>
+                            <div class="single_service">
+                                <div class="thumb">
+                                    <img src="{% static "constructo/img/service/5.jpg" %}" alt="">
+                                </div>
+                                <div class="service_info">
+                                    <a href="#">
+                                        <h3>Изготовление мебели </h3>
+                                    </a>
+                                    <p>Ремонт и изготовление на заказ деревянной мебели.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- service_area_end  -->
+
+    <!-- gallery_area-START -->
+    <div id="gallery" class="gallery_area">
+        <div class="container">
+            <div class="gallery_nav">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-md-6">
+                        <h3 class="gallery_title">Посмотрите образцы <br>
+                            выполненных проектов</h3>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="portfolio-menu">
+                            <button class="active" data-filter="*">Все</button>
+                            <button data-filter=".cat1">Квартиры</button>
+                            <button data-filter=".cat2">Дома</button>
+                            <button data-filter=".cat3">Организации</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <div class="row grid no-gutters">
+                <div class="col-xl-3 col-lg-3 col-md-6 grid-item cat2">
+                    <div class="single_gallery">
+                        <div class="thumb">
+                            <a data-fancybox href="{{ gallery_1.image.url }}">
+                            <img src="{{ gallery_1.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery_hover">
+                            <div class="hover_inner d-flex align-items-center justify-content-between">
+                                <h3>{{ gallery_1.name }}</h3>
+                                <div class="icon">
+                                    <a data-fancybox href="{{ gallery_1.image.url }}">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 grid-item cat2">
+                    <div class="single_gallery">
+                        <div class="thumb">
+                            <a data-fancybox href="{{ gallery_2.image.url }}">
+                            <img src="{{ gallery_2.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery_hover">
+                            <div class="hover_inner d-flex align-items-center justify-content-between">
+                                <h3>{{ gallery_2.name }}</h3>
+                                <div class="icon">
+                                        <a data-fancybox href="{{ gallery_2.image.url }}">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 grid-item cat3">
+                    <div class="single_gallery">
+                        <div class="thumb">
+                            <a data-fancybox href="{{ gallery_3.image.url }}">
+                            <img src="{{ gallery_3.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery_hover">
+                            <div class="hover_inner d-flex align-items-center justify-content-between">
+                                <h3>{{ gallery_3.name }}</h3>
+                                <div class="icon">
+                                        <a data-fancybox href="{{ gallery_3.image.url }}">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 grid-item cat3">
+                    <div class="single_gallery">
+                        <div class="thumb">
+                            <a data-fancybox href="{{ gallery_4.image.url }}">
+                            <img src="{{ gallery_4.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery_hover">
+                            <div class="hover_inner d-flex align-items-center justify-content-between">
+                                <h3>{{ gallery_4.name }}</h3>
+                                <div class="icon">
+                                        <a data-fancybox href="{{ gallery_4.image.url }}">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 grid-item cat1">
+                    <div class="single_gallery">
+                        <div class="thumb">
+                            <a data-fancybox href="{{ gallery_5.image.url }}">
+                            <img src="{{ gallery_5.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery_hover">
+                            <div class="hover_inner d-flex align-items-center justify-content-between">
+                                <h3>{{ gallery_5.name }}</h3>
+                                <div class="icon">
+                                        <a data-fancybox href="{{ gallery_5.image.url }}">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 grid-item cat2">
+                    <div class="single_gallery">
+                        <div class="thumb">
+                            <a data-fancybox href="{{ gallery_6.image.url }}">
+                            <img src="{{ gallery_6.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery_hover">
+                            <div class="hover_inner d-flex align-items-center justify-content-between">
+                                <h3>{{ gallery_6.name }}</h3>
+                                <div class="icon">
+                                        <a data-fancybox href="{{ gallery_6.image.url }}">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 grid-item cat3">
+                    <div class="single_gallery">
+                        <div class="thumb">
+                            <a data-fancybox href="{{ gallery_7.image.url }}">
+                            <img src="{{ gallery_7.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery_hover">
+                            <div class="hover_inner d-flex align-items-center justify-content-between">
+                                <h3>{{ gallery_7.name }}</h3>
+                                <div class="icon">
+                                        <a data-fancybox href="{{ gallery_7.image.url }}">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 grid-item cat1">
+                    <div class="single_gallery">
+                        <div class="thumb">
+                            <a data-fancybox href="{{ gallery_8.image.url }}">
+                            <img src="{{ gallery_8.image.url }}" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery_hover">
+                            <div class="hover_inner d-flex align-items-center justify-content-between">
+                                <h3>{{ gallery_8.name }}</h3>
+                                <div class="icon">
+                                        <a data-fancybox href="{{ gallery_8.image.url }}">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- gallery_area-END -->
+
+    <!-- more_pro_btn_start  -->
+    <a href="#" class="more_pro_btn">Заказать ремонт</a>
+    <!-- more_pro_btn_end  -->
+
+    <!-- chose_us_area start -->
+    <div id="film" class="chose_us_area chose_bg_1">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-6 col-md-8">
+                    <div class="chose_info">
+                        <h3>Почему нас рекомендуют?</h3>
+                        <p class="lasrge_text">
+                            Хороший ремонт - это не просто идеально ровные стены и потолок. И не только привлекательные
+                            цены. Это, в первую очередь, отличное настроение и ощущение праздника. Мы стараемся оставлять
+                            своих клиентов именно в таком эмоциональном состоянии.
+                        </p>
+                        <p>В этом небольшом фильме рассказыавется о том, как нам удается не только качественно выполнить
+                         работу, но и стать добрыми друзьями нашим дорогим клиентам.</p>
+                        <div class="icon_video">
+                            <a class="popup-video" href="https://www.youtube.com/watch?v=Spi1vvZgLXw">
+                                <i class="fa fa-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- chose_us_area end -->
+
+    <div id="testimonials" class="testimonial_area ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                        <div class="section_title text-center mb-55">
+                                <h3>Отзывы</h3>
+                            </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="testmonial_active owl-carousel">
+                        <div class="single_carousel">
+                            <div class="single_testmonial text-center">
+                                <div class="testmonial_author">
+                                    <div class="thumb">
+                                        <img src="{% static "constructo/img/testimonial/1.jpg" %}" alt="">
+                                    </div>
+                                    <h4>Роман Свалов</h4>
+                                    <span>Клиент</span>
+                                </div>
+                                <p>"Воспользовался услугами компании "Constructo” для ремонта в квартире. Остался чрезвычайно
+                                доволен как качеством услуг, так и доброжелательной атмосферой, желанием выполнить все
+                                прихоти клиента".</p>
+                            </div>
+                        </div>
+                        <div class="single_carousel">
+                            <div class="single_testmonial text-center">
+                                <div class="testmonial_author">
+                                    <div class="thumb">
+                                        <img src="{% static "constructo/img/testimonial/2.jpg" %}" alt="">
+                                    </div>
+                                    <h4>Виктор Петров</h4>
+                                    <span>Клиент</span>
+                                </div>
+                                <p>"Воспользовался услугами компании "Constructo” для ремонта в офисе. Остался чрезвычайно
+                                доволен как качеством услуг, так и доброжелательной атмосферой, желанием выполнить все
+                                прихоти клиента".</p>
+                            </div>
+                        </div>
+                        <div class="single_carousel">
+                            <div class="single_testmonial text-center">
+                                <div class="testmonial_author">
+                                    <div class="thumb">
+                                        <img src="{% static "constructo/img/testimonial/3.jpg" %}" alt="">
+                                    </div>
+                                    <h4>Николай Дробов</h4>
+                                    <span>Клиент</span>
+                                </div>
+                                <p>"Воспользовался услугами компании "Constructo” для ремонта в доме. Остался чрезвычайно
+                                доволен как качеством услуг, так и доброжелательной атмосферой, желанием выполнить все
+                                прихоти клиента".</p>
+                            </div>
+                        </div>
+                        <div class="single_carousel">
+                            <div class="single_testmonial text-center">
+                                <div class="testmonial_author">
+                                    <div class="thumb">
+                                        <img src="{% static "constructo/img/testimonial/4.jpg" %}" alt="">
+                                    </div>
+                                    <h4>Юрий Мишин</h4>
+                                    <span>Клиент</span>
+                                </div>
+                                <p>"Воспользовался услугами компании "Constructo” для ремонта на даче. Остался чрезвычайно
+                                доволен как качеством услуг, так и доброжелательной атмосферой, желанием выполнить все
+                                прихоти клиента".</p><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact_us_start  -->
+    <div class="contact_us overlay">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-7">
+                    <div class="contact_text">
+                        <h3>Вы уже определились, кому доверить ремонт?</h3>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <div class="contact_btn">
+                        <a class="boxed-btn3" href="#">Заказать ремонт</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact_us_end -->
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="download_brochure">
+            <div class="container">
+                <div class="bordered_1px">
+                        <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                        <div class="footer_logo">
+                                                <a href="#">
+                                                    <img src="{% static "constructo/img/footer_logo.png" %}" alt="">
+                                                </a>
+                                            </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="download_btn">
+                                        <a href="#"> <img src="{% static "constructo/img/icon/down.svg" %}" alt=""> Скачать презентацию</a>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-3 ">
+                        <div class="footer_widget">
+                                <h3 class="footer_title">
+                                        Контакты
+                                </h3>
+                            <p>г. Барнаул <br> ул. Лесная, 23 <br>
+                                <p>+7 000 000-00-00</p>
+                                <p>info@yoursite.com</p>
+                            <p>
+
+
+
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-pinterest"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-youtube-play"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Наши услуги
+                            </h3>
+                            <ul>
+                                <p>Внутренняя отделка </p>
+                                <p>Сантехника, электрика</p>
+                                <p>Изготовление мебели</p>
+                                <p>Перепланировка</p>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2 offset-xl-1 offset-lg-1">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Разделы
+                            </h3>
+                            <ul>
+                                <p><a href="#about">О нас</a></p>
+                                <p><a href="#services">Услуги</a></p>
+                                <p><a href="#gallery">Галерея</a></p>
+                                <p><a href="#film">Фильм</a></p>
+                                <p><a href="#testimonials">Отзывы</a></p>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Рассылка
+                            </h3>
+                            <form action="#" class="newsletter_form">
+                                <input type="text" placeholder="Ваш емейл">
+                                <button type="submit">Подписаться</button>
+                            </form>
+                            <p class="newsletter_text">Только полезная информация о ремонте и наших услугах.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Сайт создан <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> на базе шаблона <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+    <!-- JS here -->
+    <script src="{% static "constructo/js/vendor/modernizr-3.5.0.min.js" %}"></script>
+    <script src="{% static "constructo/js/vendor/jquery-1.12.4.min.js" %}"></script>
+    <script src="{% static "constructo/js/popper.min.js" %}"></script>
+    <script src="{% static "constructo/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "constructo/js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "constructo/js/isotope.pkgd.min.js" %}"></script>
+    <script src="{% static "constructo/js/ajax-form.js" %}"></script>
+    <script src="{% static "constructo/js/waypoints.min.js" %}"></script>
+    <script src="{% static "constructo/js/jquery.counterup.min.js" %}"></script>
+    <script src="{% static "constructo/js/imagesloaded.pkgd.min.js" %}"></script>
+    <script src="{% static "constructo/js/scrollIt.js" %}"></script>
+    <script src="{% static "constructo/js/jquery.scrollUp.min.js" %}"></script>
+    <script src="{% static "constructo/js/wow.min.js" %}"></script>
+    <script src="{% static "constructo/js/gijgo.min.js" %}"></script>
+    <script src="{% static "constructo/js/nice-select.min.js" %}"></script>
+    <script src="{% static "constructo/js/jquery.slicknav.min.js" %}"></script>
+    <script src="{% static "constructo/js/jquery.magnific-popup.min.js" %}"></script>
+    <script src="{% static "constructo/js/plugins.js" %}"></script>
+    <script src="{% static "constructo/js/jquery.fancybox.min.js" %}"></script>
+
+    <!--contact js-->
+    <script src="{% static "constructo/js/contact.js" %}"></script>
+    <script src="{% static "constructo/js/jquery.ajaxchimp.min.js" %}"></script>
+    <script src="{% static "constructo/js/jquery.form.js" %}"></script>
+    <script src="{% static "constructo/js/jquery.validate.min.js" %}"></script>
+    <script src="{% static "constructo/js/mail-script.js" %}"></script>
+    <script src="{% static "constructo/js/main.js" %}"></script>
+
+  <!-- Modal -->
+  <div class="modal fade custom_search_pop" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="serch_form">
+                <input type="text" placeholder="search" >
+                <button type="submit">search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-calendar-o"></span>'
+            }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-calendar-o"></span>'
+            }
+
+        });
+    </script>
+</body>
+
+</html>

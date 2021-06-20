@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}О проекте{% endblock %}
+
+<head>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(76317934, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/76317934" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    {% block meta_extend %}{% endblock %}
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+{% block content %}
+
+        <!--================Home Banner Area =================-->
+        <section class="banner_area">
+            <div class="banner_inner d-flex align-items-center">
+				<div class="container">
+					<div class="banner_content">
+						<h2>О проекте</h2>
+						<div class="page_link">
+							<a href="{% url 'index' %}">Главная</a>
+                            <a href="#">О проекте</a>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <!--================End Home Banner Area =================-->
+
+        <!--================Project Area =================-->
+<br>
+    <div class="container">
+        <div class="row mb-5">
+          <div class="col-12" >
+            <h2 class="section-title mb-3" style="text-align:center;color:#000000;">Ваш первый сайт</h2>
+              <p>Вы начинающий предприниматель и планируете искать клиентов в интернете?
+                  У вас собственное дело, но никогда не было своего сайта? Предлагаем:
+                  <strong> <li style="margin-left:30px;">лендинг (одностраничный сайт) на базе готового шаблона с админкой - 150 руб.</li>
+                  <li style="margin-left:30px;"">обслуживание сайта, включая хостинг, настройку и сопровождение контекстной рекламы - 50 руб./мес.</li></strong></p>
+              <p>Мы исходим из того, что вам незачем за свой первый сайт платить большие деньги. Вам еще только предстоит
+                  понять, как привлекать и удерживать покупателей в сети, какие тексты и картинки им нравятся, как
+                  работает контекстная реклама и анализ данных о поведении посетителей. Вот почему не стоит переплачивать
+                  за эксклюзивный дизайн и функционал, который вам пока не нужен. Потраченные деньги
+                  без опыта работы в интернете - это деньги, выведенные из оборота, но так необходимые для развития бизнеса.</p>
+
+              <p>Мы предлагаем более практичный вариант - готовое решение за небольшие деньги. У вас будет полноценный сайт
+                  с системой управления (админкой) с отличным дизайном, адаптированный для мобильных устройств и с первоначальными
+                  настройками для SEO.</p>
+
+              <p>Единственное, чем он будет отличаться от сайтов, которые стоят в 10-20 раз дороже, это неэксклюзивным дизайном.
+                  Это не значит, что у кого-то будут точно такие-же, как у вас, картинки - изображения, как и тексты у вас будут свои.
+                  Просто такое же взаимное расположение элементов сайта может быть еще у кого-то в сети. Разве это стоит того, чтобы платить втридорога?</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-5" >
+            <img src="/static/images/hero_2.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-5 ml-auto" >
+            <div class="mb-4">
+              <h3 style="color:#000000;">Простая админка</h3>
+                <p>Наша система управления сайтом (админка) проста и понятна даже новичку. В ней нет пунктов меню, которыми
+                  вы не пользуетесь, как это бывает в других движках. Это избавит вас от необходимости разбираться
+                  в функционале, не задействованном на вашем сайте. </p>
+                <p>Вы можете доверить нам обновление информации на сайте, и тогда новые фото, тексты, прайсы и т.д. мы будем размещать сами.</p>
+                К тому же это избавит вас от необходимости заботиться о хостинге и контекстной рекламе - мы сделаем все за вас всего за 50 рублей в месяц.
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="site-section cta-big-image" id="about-section">
+      <div class="container">
+        <div class="row mb-5">
+
+          <div class="col-lg-6 ml-auto mb-5 order-1 order-lg-2" >
+            <img src="/static/images/hero_3.jpg" alt="" class="img-fluid rounded">
+          </div>
+          <div class="col-lg-6 order-2 order-lg-1">
+
+            <div class="row">
+
+              <div class="col-md-12 mb-md-5 mb-0 col-lg-6" >
+                <div class="unit-4">
+                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-head" style="font-size:40px;"></span></div>
+                  <div>
+                    <h3 style="color:#000000;">Готовые решения</h3>
+                    <p>Воспользовавшись нашими готовыми решениями, вы получите современный сайт с качественным дизайном,
+                        анимацией, настроенными формами обратной связи, приема заказов и емейл адресов для рассылки. Для
+                        многостраничных сайтов реализован поиск и генерация карты сайта. Выполнена первичная настройка
+                        тегов для SEO.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 mb-md-5 mb-0 col-lg-6" >
+                <div class="unit-4">
+                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-smartphone" style="font-size:40px;"></span></div>
+                  <div>
+                    <h3 style="color:#000000;">Каталог сайтов</h3>
+                    <p>В <a href="{% url 'catalog' %}">каталоге</a> представлены сайты по различным темам: рестораны, строительство, торговля и т.д.
+                        Также в зависимости от имеющегося у вас контента и задач можно выбрать одностраничный или
+                        многостраничный сайт. Перейдя по ссылке на страницу сайта, ознакомьтесь с подробностями предлагаемого
+                        решения.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </br>
+        <!--================End Project Area =================-->
+
+        <!--================Project Details Area =================-->
+        <section class="project_know_area p_120">
+        	<div class="container">
+        		<div class="project_know_inner text-center">
+        			<h3>Нужен сайт быстро и недорого?</h3>
+        			<p>Создадим лендинг, разместим на хостинге, предоставим доступ в админку для самостоятельной замены контента.
+					Первичное размещение текстов и фотографий делаем мы.</p>
+        			<p><a href="#" class="white_btn" data-toggle="modal" data-target="#exampleModal">Заказать сайт</a></p>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Project Details Area =================-->
+
+{% endblock content %}
+
+</body>

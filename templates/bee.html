@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+  <head>
+    <title>Шаблон сайта строительной компании "Master Bee"</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+	  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "bee/css/open-iconic-bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "bee/css/animate.css" %}">
+
+    <link rel="stylesheet" href="{% static "bee/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "bee/css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "bee/css/magnific-popup.css" %}">
+
+    <link rel="stylesheet" href="{% static "bee/css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "bee/css/ionicons.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "bee/css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "bee/css/jquery.timepicker.css" %}">
+
+
+    <link rel="stylesheet" href="{% static "bee/css/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "bee/css/icomoon.css" %}">
+    <link rel="stylesheet" href="{% static "bee/css/style.css" %}">
+  </head>
+  <body>
+    <div class="bg-top navbar-light">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-center align-items-stretch">
+    			<div class="col-md-4 d-flex align-items-center py-4">
+    				<a class="navbar-brand" href="{{ bee.url }}"><span class="flaticon-bee mr-1"></span>Master Bee</a>
+    			</div>
+	    		<div class="col-lg-8 d-block">
+		    		<div class="row d-flex">
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+					    	<div class="text d-flex align-items-center">
+						    	<span>info@example.com</span>
+						    </div>
+					    </div>
+					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <div class="text d-flex align-items-center">
+						    	<span>+ 7 000 000-00-00</span>
+						    </div>
+					    </div>
+					    <div class="col-md topper d-flex align-items-center align-items-stretch">
+					    	<p class="mb-0 d-flex d-block">
+					    		<a href="#" class="btn btn-primary d-flex align-items-center justify-content-center">
+					    			<span>Узнать стоимость</span>
+					    		</a>
+					    	</p>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <form action="#" class="searchform order-lg-last">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control pl-3" placeholder="Search">
+            <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+          </div>
+        </form>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item active"><a href="{{ bee.url }}" class="nav-link pl-0">Начало</a></li>
+	        	<li class="nav-item"><a href="#about" class="nav-link">О компании</a></li>
+	        	<li class="nav-item"><a href="#servises" class="nav-link">Услуги</a></li>
+	        	<li class="nav-item"><a href="#gallery" class="nav-link">Галерея</a></li>
+	          	<li class="nav-item"><a href="#testimonials" class="nav-link">Отзывы</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image:url({% static "bee/images/b-1.jpg" %});" data-stellar-background-ratio="0.5">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+          <div class="col-md-6 text ftco-animate pl-md-5">
+            <h1 class="mb-4">Построим <span>Дом, дачу, баню</span></h1>
+            <h3 class="subheading">Проектирование и возведение малоэтажных строений под ключ.</h3>
+            <p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Узнать стоимость</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image:url({% static "bee/images/b-2.jpg" %});" data-stellar-background-ratio="0.5">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+          <div class="col-md-6 text ftco-animate pl-md-5">
+            <h1 class="mb-4">Отремонтируем <span>квартиру, офис</span></h1>
+            <h3 class="subheading">Все виды внутренних работ из материалов своих или клиента.</h3>
+            <p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Узнать стоимость</a></p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="about" class="ftco-section ftco-no-pt ftco-margin-top">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-4">
+    				<div class="request-quote">
+    					<div class="bg-primary py-4">
+    						<span class="subheading">Рады вашему проекту</span>
+    						<h3>Узнайте стоимость</h3>
+    					</div>
+    					<form action="#" class="request-form ftco-animate">
+		    				<div class="form-group">
+		    					<input type="text" class="form-control" placeholder="Имя">
+		    				</div>
+		    				<div class="form-group">
+		    					<input type="text" class="form-control" placeholder="Фамилия">
+		    				</div>
+
+	    					<div class="form-group">
+		    					<input type="text" class="form-control" placeholder="Телефон">
+		    				</div>
+	    					<div class="form-group">
+		              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Описание проекта"></textarea>
+		            </div>
+		            <div class="form-group">
+		              <input type="submit" value="Отправить" class="btn btn-primary py-3 px-4">
+		            </div>
+		    			</form>
+    				</div>
+    			</div>
+    			<div class="col-md-8 wrap-about py-5 ftco-animate">
+	          <div class="heading-section mb-5">
+	            <h2 class="mb-4" style="font-weight:800;">Нас рекомендуют друзьям</h2>
+	          </div>
+	          <div class="">
+							<p class="mb-5" style="font-family: 'Roboto', sans-serif;">Здесь предлагается рассказать о таком показательном индикаторе качества строительных работ, как рекомендации. Если строителей рекомендуют друзьям и знакомым, значит они - настоящие профессионалы. Постарайтесь привести цифры, в обобщенном виде рассказывающие о клиентах, обратившихся к вам по рекомендации коллег, соседей и друзей.</p>
+							<p><a href="#" class="btn btn-secondary px-5 py-3">Master Bee в цифрах</a></p>
+						</div>
+					</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section id="servises" class="ftco-services ftco-no-pt">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+          	<span class="subheading">Услуги</span>
+            <h2 class="mb-4" style="font-weight:800;">Мы предлагаем</h2>
+            <p style="font-family: 'Roboto', sans-serif;">Мы оказываем только те услуги, которые осуществляем без привлечения субподрядчиков, и на которые можем дать гарантию качества.</p>
+          </div>
+        </div>
+				<div class="row">
+          <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-hook"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading" style="'Roboto', sans-serif; font-weight:800;">Строительство</h3>
+                <p>Здесь предлагается перечислить те виды работ, на которые имеется лицензия или на которые она не нужна.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-skyline"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading" style="'Roboto', sans-serif; font-weight:800;">Внешняя отделка</h3>
+                <p>Здесь предлагается перечислить оказываемые услуги, касающиеся внешней отделки зданий и сооружений.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-stairs"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading" style="'Roboto', sans-serif; font-weight:800;">Внутрення отделка</h3>
+                <p>Здесь предлагается перечислить оказываемые услуги, касающиеся внутренней отделки квартир, офисов.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+            <div class="media block-6 d-block text-center">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-home"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading" style="'Roboto', sans-serif; font-weight:800;">Перепланировка</h3>
+                <p>Здесь предлагается перечислить оказываемые услуги, относящиеся к перепланировке помещений.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+
+		<section class="ftco-intro" style="background-image: url({% static "bee/images/bg_3.jpg" %});" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-9 text-center">
+						<h2>Осуществим вашу мечту вместе</h2>
+						<p style="font-family: 'Roboto', sans-serif;">Гарантируем, что проект будет выполнен в срок и на отлично. Наш опыт и квалификация - порука тому.</p>
+						<p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Скачать презентацию</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+          	<span class="subheading">Команда</span>
+            <h2 class="mb-4" style="font-weight:800;">Это настоящие профессионалы</h2>
+            <p style="font-family: 'Roboto', sans-serif;">Расскажите в нескольких предложениях о квалификации своих сотрудников и их достижениях. Не забудьте упомянуть средний возраст и опыт работы коллег.</p>
+          </div>
+        </div>
+				<div class="row">
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url({% static "bee/images/team-1.jpg" %})"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3 style="font-family: 'Roboto', sans-serif;">Петр Головин</h3>
+								<span class="position mb-2" style="font-family: 'Roboto', sans-serif;">Главный инженер</span>
+								<div class="faded">
+									<!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url({% static "bee/images/team-2.jpg" %})"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3 style="font-family: 'Roboto', sans-serif;">Игорь Дробов</h3>
+								<span class="position mb-2" style="font-family: 'Roboto', sans-serif;">Прораб</span>
+								<div class="faded">
+									<!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url({% static "bee/images/team-3.jpg" %})"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3 style="font-family: 'Roboto', sans-serif;">Ксения Мышкина</h3>
+								<span class="position mb-2" style="font-family: 'Roboto', sans-serif;">Инженер</span>
+								<div class="faded">
+									<!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="staff">
+							<div class="img-wrap d-flex align-items-stretch">
+								<div class="img align-self-stretch" style="background-image: url({% static "bee/images/team-4.jpg" %})"></div>
+							</div>
+							<div class="text pt-3 text-center">
+								<h3 style="font-family: 'Roboto', sans-serif;">Михаил Иванов</h3>
+								<span class="position mb-2" style="font-family: 'Roboto', sans-serif;">Начальник участка</span>
+								<div class="faded">
+									<!-- <p>I am an ambitious workaholic, but apart from that, pretty simple person.</p> -->
+									<ul class="ftco-social text-center">
+		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+		              </ul>
+	              </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="gallery" class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container-fluid p-0">
+				<div class="row no-gutters justify-content-center mb-5 pb-2">
+          <div class="col-md-6 text-center heading-section ftco-animate">
+          	<span class="subheading">Проекты</span>
+            <h2 class="mb-4" style="font-weight:800;">То, чем мы гордимся</h2>
+            <p style="font-family: 'Roboto', sans-serif;">Каждая из размещенных в этом разделе фотографий, должна продемонстрировать как масштаб выполненных проектов, так и их разнообразие.</p>
+          </div>
+        </div>
+    		<div class="row no-gutters">
+				{% for i in gallery %}
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="project">
+	    				<img src="{{ i.image.url }}" class="img-fluid" alt="">
+	    				<div class="text">
+	    					<span>{{ i.job }}</span>
+	    					<h3><a href="project.html">{{ i.name }}</a></h3>
+	    				</div>
+	    				<a href="{{ i.image.url }}" class="icon image-popup d-flex justify-content-center align-items-center">
+							<span class="icon-expand"></span>
+	    				</a>
+    				</div>
+    			</div>
+				{% endfor %}
+
+    		</div>
+    		</div>
+		</section>
+
+    <section class="ftco-counter img" id="section-counter" style="background-image: url({% static "bee/images/bg_3.jpg" %})" data-stellar-background-ratio="0.5">
+    	<div class="container">
+				<div class="row">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="7">0</strong>
+              </div>
+              <div class="text-2">
+              	<span>Лет на <br>рынке</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="69">0</strong>
+              </div>
+              <div class="text-2">
+              	<span>Успешных <br>проектов</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="47">0</strong>
+              </div>
+              <div class="text-2">
+              	<span>Опытных <br>рабочих</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 d-flex">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="69">0</strong>
+              </div>
+              <div class="text-2">
+              	<span>Довольных <br>клиентов</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section id="testimonials" class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row ftco-animate">
+        	<div class="col-md-6 col-lg-6 col-xl-4">
+        		<div class="heading-section ftco-animate">
+	          	<span class="subheading">Услуги</span>
+	            <h2 class="mb-4" style="font-weight:800;">Дополнительные сервисы</h2>
+	          </div>
+        		<div class="services-flow">
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        				<div class="icon">
+        					<span class="flaticon-engineer"></span>
+        				</div>
+        				<div class="text">
+	        				<h3 style="font-weight:800;">Экспертная оценка</h3>
+	        				<p style="font-family: 'Roboto', sans-serif;">Обследование зданий, сооружений, инженерных сетей</p>
+        				</div>
+        			</div>
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        				<div class="icon">
+        					<span class="flaticon-engineer-1"></span>
+        				</div>
+        				<div class="text">
+	        				<h3 style="font-weight:800;">Монтаж электросетей</h3>
+	        				<p style="font-family: 'Roboto', sans-serif;">Проектирование и монтаж сетей в жилых помещениях</p>
+	        			</div>
+        			</div>
+        			<div class="services-2 p-4 d-flex ftco-animate">
+        				<div class="icon">
+        					<span class="flaticon-engineer-2"></span>
+        				</div>
+        				<div class="text">
+	        				<h3 style="font-weight:800;">24/7 Техподдержка</h3>
+	        				<p style="font-family: 'Roboto', sans-serif;">Мы ответим на любые ваши вопросы во время работы над проектом</p>
+	        			</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-xl-1 d-xl-block d-none"></div>
+          <div class="col-md-6 col-lg-6 col-xl-7">
+          	<div class="heading-section ftco-animate mb-5">
+	          	<span class="subheading">Отзывы</span>
+	            <h2 class="mb-4" style="font-weight:800;">Клиенты о нас:</h2>
+	            <p style="font-family: 'Roboto', sans-serif;">В этом разделе сайта предлагается опубликовать положительныые отзывы ваших заказчиков с их реальными именами об оказанных вами услугах. </p>
+	          </div>
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="text bg-light p-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>Воспользовался услугами компании для внутренней отделки дачи. Ребята молодцы, все сделали быстро и качественно. На все пожелания реагировали доброжелательно, с готовностью выполнить все пожелания клиента.</p>
+                    <p class="name">Семен Привалов</p>
+                    <span class="position">Инженер</span>
+                  </div>
+                  <div class="user-img" style="background-image: url({% static "bee/images/person_1.jpg" %})">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="text bg-light p-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>Воспользовался услугами компании для перепланировки квартиры. Ребята молодцы, все сделали быстро и качественно. На все пожелания реагировали доброжелательно, с готовностью выполнить все пожелания клиента.</p>
+                    <p class="name">Игорь Симонов</p>
+                    <span class="position">Бизнесмен</span>
+                  </div>
+                  <div class="user-img" style="background-image: url({% static "bee/images/person_2.jpg" %})">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="text bg-light p-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>Воспользовался услугами компании для внешней отделки загородного дома. Ребята молодцы, все сделали быстро и качественно. На все пожелания реагировали доброжелательно, с готовностью выполнить все пожелания клиента.</p>
+                    <p class="name">Арнольд Струк</p>
+                    <span class="position">Директор предприятия</span>
+                  </div>
+                  <div class="user-img" style="background-image: url({% static "bee/images/person_3.jpg" %})">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="text bg-light p-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>Воспользовался услугами фирмы для постройки дачи. Ребята молодцы, все сделали быстро и качественно. На все пожелания реагировали доброжелательно, с готовностью выполнить все пожелания клиента.</p>
+                    <p class="name">Роман Жженов</p>
+                    <span class="position">Предприниматель</span>
+                  </div>
+                  <div class="user-img" style="background-image: url({% static "bee/images/person_4.jpg" %})">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap">
+                  <div class="text bg-light p-4">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>Воспользовался услугами фирмы для ремонта квартиры. Ребята молодцы, все сделали быстро и качественно. На все пожелания реагировали доброжелательно, с готовностью выполнить все пожелания клиента.</p>
+                    <p class="name">Евгений Журов</p>
+                    <span class="position">Менеджер</span>
+                  </div>
+                  <div class="user-img" style="background-image: url({% static "bee/images/person_1.jpg" %})">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2 logo"><span class="flaticon-bee"></span> Мастер "Bee"</h2>
+              <p style="font-family: 'Roboto', sans-serif; color: cyan;">Строительная компания, специализирующаяся на возведении малоэтажных строений, ремонтных и отделочных работах по умеренным расценкам.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5 ml-md-4">
+              <h2 class="ftco-heading-2">Услуги</h2>
+              <ul class="list-unstyled">
+                <li style="color: cyan;"><span class="ion-ios-arrow-round-forward mr-2"></span>Строительство</a></li>
+                <li style="color: cyan;"><span class="ion-ios-arrow-round-forward mr-2"></span>Ремонт</a></li>
+                <li style="color: cyan;"><span class="ion-ios-arrow-round-forward mr-2"></span>Перепланировка</a></li>
+                <li style="color: cyan;"><span class="ion-ios-arrow-round-forward mr-2"></span>Инженерные сети</a></li>
+                <li style="color: cyan;"><span class="ion-ios-arrow-round-forward mr-2"></span>Экспертиза</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Рассылка</h2>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Введите емейл">
+                  <input type="submit" value="Подписаться" class="form-control submit px-3">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Сайт создан <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> на базе шаблона <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static "bee/js/jquery.min.js" %}"></script>
+  <script src="{% static "bee/js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "bee/js/popper.min.js" %}"></script>
+  <script src="{% static "bee/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "bee/js/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "bee/js/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "bee/js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "bee/js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "bee/js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "bee/js/aos.js" %}"></script>
+  <script src="{% static "bee/js/jquery.animateNumber.min.js" %}"></script>
+  <script src="{% static "bee/js/bootstrap-datepicker.js" %}"></script>
+  <script src="{% static "bee/js/jquery.timepicker.min.js" %}"></script>
+  <script src="{% static "bee/js/scrollax.min.js" %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static "bee/js/google-map.js" %}"></script>
+  <script src="{% static "bee/js/main.js" %}"></script>
+
+  </body>
+</html>

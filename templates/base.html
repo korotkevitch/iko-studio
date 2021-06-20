@@ -1,0 +1,168 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+    <head>
+		<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(76317934, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/76317934" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+        {% block meta_extend %}{% endblock %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>
+        {% block title %}{% endblock %}
+        </title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static "occupy/css/bootstrap.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/linericon/style.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/css/font-awesome.min.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/owl-carousel/owl.carousel.min.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/lightbox/simpleLightbox.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/nice-select/css/nice-select.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/animate-css/animate.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/vendors/swiper/css/swiper.min.css" %}">
+        <link rel="stylesheet" href="{% static "fonts/flaticon/font/flaticon.css" %}">
+
+        <!-- main css -->
+        <link rel="stylesheet" href="{% static "occupy/css/style.css" %}">
+        <link rel="stylesheet" href="{% static "occupy/css/responsive.css" %}">
+    </head>
+    <body>
+
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="{% url 'index' %}"><img src="{% static "images/logo.jpg" %}" alt=""></a>
+						<a style="font-size:30px; color:gray;" href="tel:+375297351867"><i class="fa fa-phone"></i></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav justify-content-center">
+								<li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Главная</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'about' %}">О проекте</a></li>
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="{% url 'catalog' %}">Все</a>
+                                        {% for i in areas %}
+										<li class="nav-item"><a class="nav-link" href="{{ i.get_absolute_url }}">{{ i.area }}</a>
+                                        {% endfor %}
+									</ul>
+								</li>
+                                <li class="nav-item"><a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+								<li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+
+
+        {% block content%} {% endblock content %}
+
+        <footer class="ftco-footer">
+			<div class="container-fluid px-0 py-5 bg-black">
+    			<div class="container">
+        			<div class="row">
+            			<div style="text-align:center;" class="col-md-12">
+                		<p class="mb-0" style="color: gray;">
+                    	<a href="tel:+375297351867"><i class="fa fa-phone"></i>  +375 (29) 735-18-67</a><br>
+						Создание сайта: <a href="https://iko-studio.com" target="_blank">iko-studio.com</a> & <a href="https://colorlib.com" target="_blank">Colorlib</a>                </p>
+            			</div>
+						<div style="text-align:center; font-size:20px; letter-spacing: 3px;" class="col-lg-12 col-md-3 footer-social">
+                        <a target="_blank" href="https://www.facebook.com/groups/780306726243086"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/iko_studio_com/"><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.pinterest.com/3955f957e18269d051fd8ecbfa96a9
+"><i class="fa fa-pinterest"></i></a>
+                        <a target="_blank" href="https://vk.com/ikostudio"><i class="fa fa-vk"></i></a>
+                    	</div>
+        			</div>
+    			</div>
+			</div>
+		</footer>
+		<!--================ End footer Area  =================-->
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="{% static "occupy/js/jquery-3.2.1.min.js" %}"></script>
+        <script src="{% static "occupy/js/popper.js" %}"></script>
+        <script src="{% static "occupy/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "occupy/js/stellar.js" %}"></script>
+        <script src="{% static "occupy/vendors/lightbox/simpleLightbox.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/nice-select/js/jquery.nice-select.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/isotope/imagesloaded.pkgd.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/isotope/isotope-min.js" %}"></script>
+        <script src="{% static "occupy/vendors/owl-carousel/owl.carousel.min.js" %}"></script>
+        <script src="{% static "occupy/js/jquery.ajaxchimp.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/counter-up/jquery.waypoints.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/counter-up/jquery.counterup.js" %}"></script>
+        <script src="{% static "occupy/js/mail-script.js" %}"></script>
+        <script src="{% static "occupy/vendors/popup/jquery.magnific-popup.min.js" %}"></script>
+        <script src="{% static "occupy/vendors/swiper/js/swiper.min.js" %}"></script>
+        <script src="{% static "occupy/js/theme.js" %}"></script>
+
+    <!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h3 class="modal-title" id="exampleModalLabel" style="color: gray;">Форма заказа</h3>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form action="feedback_index" method="POST">
+				{% csrf_token %}
+				<div class="form-group">
+					<input type="text" class="form-control" name="name" placeholder="Имя" required="">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control" name = "email" placeholder="Email" required="">
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control" name = "subject" placeholder="Тема" >
+				</div>
+
+				<div class="form-group">
+					<textarea class="form-control" name="message" rows="3" placeholder="Сообщение" required=""></textarea>
+				</div>
+				<!-- end of form-group -->
+				<input type="submit" value="Отправить" class="btn btn-primary">
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			Отправляя заказ, вы соглашаетесь на обработку персональных данных.
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+    </body>
+</html>
